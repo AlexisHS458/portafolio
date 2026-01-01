@@ -1,0 +1,111 @@
+.contact-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contact-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.content {
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+}
+
+.content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--text-secondary);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.email::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.email:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.email:hover::before {
+  left: 0;
+}
+
+.linked-in {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: opacity 0.3s ease;
+}
+
+.linked-in:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-wrap {
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .email {
+    font-size: 1rem;
+    padding: 0.625rem 1.25rem;
+  }
+}
