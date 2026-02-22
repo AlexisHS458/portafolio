@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import "./CSS Files/Navbar.css";
 import Typewriter from "typewriter-effect/dist/core";
 
-import Pdf from "./Images/CV_AHS.pdf";
+import Pdf from "./Images/CV.pdf";
 
 function Navbar() {
   const typewriterRef = useRef<HTMLSpanElement>(null);
