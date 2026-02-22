@@ -17,8 +17,8 @@ function Navbar() {
     const typewriter = new Typewriter(typewriterRef.current, {
       strings: [
         "Frontend Developer",
-        "Vue & React Specialist",
-        "UI/UX Enthusiast",
+        "Vue, React & Next.js",
+        "Clean Code & Performance",
       ],
       autoStart: true,
       loop: true,
@@ -90,8 +90,9 @@ function Navbar() {
           <span ref={typewriterRef}></span>
         </h2>
         <p>
-          Frontend Developer with 3+ years of experience building responsive and performant 
-          web applications. Passionate about creating beautiful and functional user experiences.
+          Frontend Developer with 3+ years of experience building responsive and maintainable 
+          web applications with Vue, React, and Next.js. Focused on clean code, performance 
+          optimization, and practical solutions that improve user experience.
         </p>
         <Link to="Contact" smooth={true} duration={900}>
           <button>Contact Me</button>

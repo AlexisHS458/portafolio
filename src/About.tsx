@@ -1,39 +1,49 @@
 import "./CSS Files/about.css";
 
+const skillCategories: { title: string; items: string[] }[] = [
+	{
+		title: "Frontend",
+		items: ["Vue 2/3", "Nuxt.js", "React", "Next.js", "Angular", "Shopify"],
+	},
+	{
+		title: "Programming languages",
+		items: ["Javascript", "Typescript", "Liquid"],
+	},
+	{
+		title: "State Management",
+		items: ["Pinia", "Vuex", "React Context API"],
+	},
+	{
+		title: "API integration",
+		items: ["REST API integration", "GraphQL", "Axios", "React Context API"],
+	},
+	{
+		title: "Styling & UI",
+		items: ["Tailwind CSS", "Chakra UI", "Mantine UI", "Vuetify", "Bootstrap", "Next UI"],
+	},
+	{
+		title: "UX/UI",
+		items: ["Figma"],
+	},
+	{
+		title: "Tools & Workflow",
+		items: ["Git", "GitHub", "Docker", "Agile"],
+	},
+	{
+		title: "Soft Skills",
+		items: ["Communication", "Team Collaboration", "Time Management", "Problem Solving", "Adaptability"],
+	},
+	{
+		title: "Core Strengths",
+		items: ["Reusable UI patterns", "Modular project structuring"],
+	},
+	{
+		title: "Languages",
+		items: ["English Pre-Intermediate", "Spanish Native"],
+	},
+];
+
 function About() {
-	const frontend: string[] = [
-		"Vue",
-		"React",
-		"Angular",
-		"Next.js",
-		"Nuxt.js",
-		"JavaScript",
-		"TypeScript",
-		"Pinia",
-		"Vuex",
-		"GraphQL",
-		"Tailwind",
-		"Vuetify",
-		"Mantine UI",
-		"Next UI",
-		"Chakra UI",
-		"React Hooks",
-		"HTML/CSS",
-		"Bootstrap",
-		"Shopify",
-		"Liquid",
-	];
-
-	const tools: string[] = [
-		"GitHub/Git",
-		"Docker",
-		"Figma",
-		"Stripe",
-		"SquareUp",
-		"Strapi",
-		"Axios",
-	];
-
 	return (
 		<section className="about-section" id="About">
 			<h1 className="about-title">
@@ -42,35 +52,33 @@ function About() {
 			<div className="content-wrapper">
 				<div className="about-text">
 					<p>
-						Frontend Developer with over 3 years of experience building responsive, 
-						performant, and visually engaging web applications. Skilled in modern 
-						JavaScript frameworks such as Vue, Angular, and React, with a strong 
-						emphasis on user experience and seamless backend integration.
+						Frontend Developer with over 3 years of experience building responsive and 
+						maintainable web applications using Vue, React, and Next.js. Experienced in 
+						integrating REST and GraphQL APIs, managing application state with Pinia, 
+						Vuex, and Context API, and developing reusable component-based interfaces.
 					</p>
 					<p>
-						Passionate about optimizing frontends for usability, performance, and 
-						maintainability in cross-functional agile environments. Experienced in 
-						leading development teams and implementing code reuse strategies that 
-						reduce development time while improving user experience.
+						I have worked on ecommerce platforms, internal management systems, and 
+						government websites, focusing on improving usability, optimizing workflows, 
+						and maintaining scalable code structures. Comfortable collaborating with 
+						backend teams to ensure reliable API integration and consistent data handling.
+					</p>
+					<p>
+						Focused on clean code, performance optimization, and delivering practical 
+						solutions that improve user experience and development efficiency.
 					</p>
 				</div>
 				<div className="tools-section">
-					<div className="tools">
-						<h1>Frontend Technologies</h1>
-						<div>
-							{frontend.map((tech, index) => (
-								<span key={index}>{tech}</span>
-							))}
+					{skillCategories.map((category, catIndex) => (
+						<div className="tools" key={catIndex}>
+							<h1>{category.title}</h1>
+							<div>
+								{category.items.map((item, index) => (
+									<span key={index}>{item}</span>
+								))}
+							</div>
 						</div>
-					</div>
-					<div className="tools">
-						<h1>Tools & Services</h1>
-						<div>
-							{tools.map((tool, index) => (
-								<span key={index}>{tool}</span>
-							))}
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 		</section>
