@@ -1,3 +1,5 @@
+import { useRef, useState, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import "./CSS Files/projects.css";
 
 import forprint from "./Images/Forprint.png";
@@ -7,10 +9,32 @@ import gmar from "./Images/GMAR.png";
 import kun from "./Images/KUN.png";
 import ecommerce from "./Images/Ecommerce.png";
 import todo from "./Images/Todo.png";
+import casa from "./Images/Casa.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+
+const FILTER_KEYS = ["all", "vue", "react", "angular", "next", "nuxt", "liquid"] as const;
+type FilterKey = (typeof FILTER_KEYS)[number];
+
+const PROJECTS_LIST: {
+	id: string;
+	image: string;
+	siteLink?: string;
+	githubLink?: string;
+	tags: FilterKey[];
+}[] = [
+	{ id: "lacasagallery", image: casa, siteLink: "https://www.lacasagallery.com/", tags: ["liquid"] },
+	{ id: "ourmaids", image: OurMaids, siteLink: "https://ourmaids.com/", tags: ["react", "next"] },
+	{ id: "codisa", image: codisa, siteLink: "https://codisa-ecommerce-store-dev.on.ocstudios.mx/", tags: ["vue", "nuxt"] },
+	{ id: "todo", image: todo, githubLink: "https://github.com/AlexisHS458/to-do-list", siteLink: "https://to-do-list-two-beryl-12.vercel.app/", tags: ["vue"] },
+	{ id: "ecommerce", image: ecommerce, githubLink: "https://github.com/AlexisHS458/ecommerce-app", siteLink: "https://ecommerce-prueba-bambu-prod.web.app/", tags: ["angular"] },
+	{ id: "forprint", image: forprint, tags: ["vue", "nuxt"] },
+	{ id: "gmarLanding", image: gmar, siteLink: "https://www.gmar.app/", tags: ["vue", "nuxt"] },
+	{ id: "gmarBackoffice", image: gmar, tags: ["vue", "nuxt"] },
+	{ id: "pcppd", image: kun, githubLink: "https://github.com/AlexisHS458/Proyecto_PCPPD", tags: ["vue"] },
+];
 
 interface ProjectCardProps {
 	title: string;
@@ -19,6 +43,7 @@ interface ProjectCardProps {
 	siteLink?: string;
 	technologies: string;
 	description: string;
+	tagKeys: FilterKey[];
 }
 
 function ProjectCard({
@@ -28,110 +53,128 @@ function ProjectCard({
 	siteLink,
 	technologies,
 	description,
+	tagKeys,
 }: ProjectCardProps) {
-	return (
-		<div className="project">
-			<a
-				href={siteLink ? siteLink : githubLink}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<img className="images" src={imageSrc} alt={title} />
-			</a>
-			<div className="project-info">
-				<div className="project-title">
-					<h2>{title}</h2>
-					<div style={{ display: "flex", gap: "0.75rem" }}>
-						{siteLink && (
-							<a href={siteLink} target="_blank" rel="noopener noreferrer">
-								<FontAwesomeIcon icon={faGlobe} />
-							</a>
-						)}
+	const { t } = useTranslation();
+	const cardRef = useRef<HTMLDivElement>(null);
+	const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+	const [isHovering, setIsHovering] = useState(false);
 
-						{githubLink && (
-							<a href={githubLink} target="_blank" rel="noopener noreferrer">
-								<FontAwesomeIcon icon={faGithub} />
-							</a>
-						)}
+	const handleMouseMove = useCallback(
+		(e: React.MouseEvent<HTMLDivElement>) => {
+			if (!cardRef.current) return;
+			const rect = cardRef.current.getBoundingClientRect();
+			const x = ((e.clientX - rect.left) / rect.width) * 100;
+			const y = ((e.clientY - rect.top) / rect.height) * 100;
+			setMousePosition({ x, y });
+		},
+		[]
+	);
+
+	const handleMouseLeave = useCallback(() => {
+		setIsHovering(false);
+		setMousePosition({ x: 50, y: 50 });
+	}, []);
+
+	const handleMouseEnter = useCallback(() => {
+		setIsHovering(true);
+	}, []);
+
+	return (
+		<div
+			ref={cardRef}
+			className="project-card-wrapper"
+			onMouseMove={handleMouseMove}
+			onMouseLeave={handleMouseLeave}
+			onMouseEnter={handleMouseEnter}
+			style={
+				{
+					"--mouse-x": `${mousePosition.x}%`,
+					"--mouse-y": `${mousePosition.y}%`,
+				} as React.CSSProperties
+			}
+		>
+			<div className={`project ${isHovering ? "project-hover" : ""}`}>
+				<a
+					href={siteLink ? siteLink : githubLink}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img className="images" src={imageSrc} alt={title} />
+				</a>
+				<div className="project-info">
+					<div className="project-title">
+						<h2>{title}</h2>
+						<div style={{ display: "flex", gap: "0.75rem" }}>
+							{siteLink && (
+								<a href={siteLink} target="_blank" rel="noopener noreferrer">
+									<FontAwesomeIcon icon={faGlobe} />
+								</a>
+							)}
+
+							{githubLink && (
+								<a href={githubLink} target="_blank" rel="noopener noreferrer">
+									<FontAwesomeIcon icon={faGithub} />
+								</a>
+							)}
+						</div>
 					</div>
+					{tagKeys.length > 0 && (
+						<div className="project-tags">
+							{tagKeys.map((key) => (
+								<span key={key} className="project-tag">
+									{t(`projects.filters.${key}`)}
+								</span>
+							))}
+						</div>
+					)}
+					<h3>{technologies}</h3>
+					<p>{description}</p>
 				</div>
-				<h3>{technologies}</h3>
-				<p>{description}</p>
 			</div>
 		</div>
 	);
 }
 
 function Projects() {
+	const { t } = useTranslation();
+	const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
+
+	const filteredProjects =
+		activeFilter === "all"
+			? PROJECTS_LIST
+			: PROJECTS_LIST.filter((p) => p.tags.includes(activeFilter));
+
 	return (
 		<div id="Projects">
-			<h1 className="title">
-				Projects<span style={{ color: "#ffffff" }}>.</span>
+			<h1 className="title" data-aos="fade-up">
+				{t("projects.title")}<span style={{ color: "var(--accent-color)" }}>.</span>
 			</h1>
-			<div className="projects-wrapper">
-				<ProjectCard
-					title="CODISA E-Commerce"
-					imageSrc={codisa}
-					siteLink="https://codisa-ecommerce-store-dev.on.ocstudios.mx/"
-					technologies="Vue · Nuxt.js · Vuetify · Pinia · GraphQL Apollo"
-					description="Led the redesign of Codisa's e-commerce platform, improving user experience with enhanced features. Integrated backend for easy banner and product management with automated stock display. Includes shopping cart, secure authentication, multiple shipping addresses, order history, and wishlist functionality."
-				/>
-
-				<ProjectCard
-					title="OurMaids"
-					imageSrc={OurMaids}
-					siteLink="https://ourmaids.com/"
-					technologies="React · Next.js · Tailwind · SquareUp · TypeScript"
-					description="Redesigned OurMaids' website improving SEO and restructuring information architecture. Modern landing page and web platform for a cleaning service business with integrated payment solutions."
-				/>
-
-				<ProjectCard
-					title="Forprint Backoffice"
-					imageSrc={forprint}
-					technologies="Vue · Nuxt.js · Vuetify · Pinia"
-					description="Created an efficient internal payment visualization interface for Forprint. Admin dashboard for managing bank transfer payments, accepting or declining transactions, and generating purchase invoices with streamlined workflows."
-				/>
-
-				<ProjectCard
-					title="Give Me A Ride Landing Page"
-					imageSrc={gmar}
-					siteLink="https://www.gmar.app/"
-					technologies="Vue · Nuxt.js · Vuetify · Vuex · GraphQL"
-					description="Designed and developed a user-centric marketing landing page with optimized SEO, achieving 5-10 daily visits with fast load times. Features terms and conditions, privacy policy, pricing plans, and FAQ sections."
-				/>
-
-				<ProjectCard
-					title="Give Me A Ride Backoffice"
-					imageSrc={gmar}
-					technologies="Vue · Nuxt.js · Vuetify · Vuex · GraphQL"
-					description="Developed a user-focused internal verification page streamlining control and report reviews. Implemented GraphQL notifications for instant real-time updates, significantly improving admin efficiency and workflow."
-				/>
-
-				<ProjectCard
-					title="PCPPD"
-					imageSrc={kun}
-					githubLink="https://github.com/AlexisHS458/Proyecto_PCPPD"
-					technologies="Vue · Vuetify · Vuex · Firebase"
-					description="Collaborative programming platform with GitHub integration for code editing, pull requests, and team communication."
-				/>
-
-				<ProjectCard
-					title="Todo List"
-					imageSrc={todo}
-					githubLink="https://github.com/AlexisHS458/to-do-list"
-					siteLink="https://to-do-list-two-beryl-12.vercel.app/"
-					technologies="Vue · Vuetify · TypeScript · Vite · Pinia"
-					description="A simple todo list application built with Vue 3, Vite, and Pinia. It allows you to add, edit, and delete tasks."
-				/>
-
-				<ProjectCard
-					title="Ecommerce"
-					imageSrc={ecommerce}
-					githubLink="https://github.com/AlexisHS458/ecommerce-app"
-					siteLink="https://ecommerce-prueba-bambu-prod.web.app/"
-					technologies="Angular · Tailwind · PrimeNG · Firebase · TypeScript"
-					description="Ecommerce application built with Angular, Tailwind, PrimeNG, Firebase, and TypeScript. It allows you to add, edit, and delete products."
-				/>
+			<div className="projects-filters" data-aos="fade-up" data-aos-delay="50">
+				{FILTER_KEYS.map((key) => (
+					<button
+						key={key}
+						type="button"
+						className={`projects-filter-btn ${activeFilter === key ? "active" : ""}`}
+						onClick={() => setActiveFilter(key)}
+					>
+						{t(`projects.filters.${key}`)}
+					</button>
+				))}
+			</div>
+			<div className="projects-wrapper" data-aos="fade-up" data-aos-delay="100">
+				{filteredProjects.map((proj) => (
+					<ProjectCard
+						key={proj.id}
+						title={t(`projects.${proj.id}.title`)}
+						imageSrc={proj.image}
+						siteLink={proj.siteLink}
+						githubLink={proj.githubLink}
+						technologies={t(`projects.${proj.id}.technologies`)}
+						description={t(`projects.${proj.id}.description`)}
+						tagKeys={proj.tags}
+					/>
+				))}
 			</div>
 		</div>
 	);

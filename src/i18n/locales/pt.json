@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Alexis Herrera Saucedo | Desenvolvedor Frontend",
+    "description": "Desenvolvedor Frontend com mais de 3 anos de experiência criando aplicações web responsivas com Vue, React e Next.js. Portfólio e contato."
+  },
+  "nav": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "resume": "Currículo"
+  },
+  "hero": {
+    "heyIm": "Olá, sou Alexis",
+    "typewriter1": "Desenvolvedor Frontend",
+    "typewriter2": "Vue, React e Next.js",
+    "typewriter3": "Código limpo e performance",
+    "intro": "Desenvolvedor Frontend com mais de 3 anos de experiência criando aplicações web responsivas e sustentáveis com Vue, React e Next.js. Focado em código limpo, otimização de performance e soluções práticas que melhoram a experiência do usuário.",
+    "contactMe": "Fale comigo",
+    "viewProjects": "Ver projetos",
+    "highlights": "3+ anos de experiência · 8+ projetos · Vue · React · Next.js",
+    "scrollHint": "Role para explorar"
+  },
+  "about": {
+    "title": "Sobre",
+    "paragraph1": "Desenvolvedor Frontend com mais de 3 anos de experiência construindo aplicações web responsivas e sustentáveis com Vue, React e Next.js. Experiência em integração de APIs REST e GraphQL, gestão de estado com Pinia, Vuex e Context API, e desenvolvimento de interfaces reutilizáveis baseadas em componentes.",
+    "paragraph2": "Trabalhei em plataformas de e-commerce, sistemas de gestão internos e sites governamentais, com foco em usabilidade, otimização de fluxos de trabalho e estruturas de código escaláveis. À vontade colaborando com times de backend para integração confiável de APIs e tratamento consistente de dados.",
+    "paragraph3": "Focado em código limpo, otimização de performance e entrega de soluções práticas que melhoram a experiência do usuário e a eficiência do desenvolvimento.",
+    "tabs": {
+      "technologies": "Tecnologias",
+      "tools": "Ferramentas",
+      "skills": "Habilidades"
+    },
+    "categories": {
+      "frontend": "Frontend",
+      "programmingLanguages": "Linguagens de programação",
+      "stateManagement": "Gerenciamento de estado",
+      "apiIntegration": "Integração de API",
+      "stylingUi": "Estilos e UI",
+      "uxUi": "UX/UI",
+      "toolsWorkflow": "Ferramentas e fluxo de trabalho",
+      "coreStrengths": "Pontos fortes",
+      "softSkills": "Habilidades interpessoais",
+      "languages": "Idiomas"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "filters": {
+      "all": "Todos",
+      "vue": "Vue",
+      "react": "React",
+      "angular": "Angular",
+      "next": "Next.js",
+      "nuxt": "Nuxt.js",
+      "liquid": "Liquid"
+    },
+    "codisa": {
+      "title": "CODISA E-Commerce",
+      "technologies": "Vue · Nuxt.js · Vuetify · Pinia · GraphQL Apollo",
+      "description": "Liderança no redesign da plataforma e-commerce da Codisa, melhorando a experiência do usuário. Integração com backend para gestão de banners e produtos com exibição automática de estoque. Inclui carrinho, autenticação segura, múltiplos endereços de envio, histórico de pedidos e lista de desejos."
+    },
+    "ourmaids": {
+      "title": "OurMaids",
+      "technologies": "React · Next.js · Tailwind · SquareUp · TypeScript",
+      "description": "Redesign do site OurMaids com melhoria de SEO e reestruturação da arquitetura de informação. Landing e plataforma web moderna para negócio de limpeza com soluções de pagamento integradas."
+    },
+    "forprint": {
+      "title": "Forprint Backoffice",
+      "technologies": "Vue · Nuxt.js · Vuetify · Pinia",
+      "description": "Criação de interface interna de visualização de pagamentos para Forprint. Painel admin para gestão de transferências bancárias, aprovação de transações e geração de faturas com fluxos otimizados."
+    },
+    "gmarLanding": {
+      "title": "Give Me A Ride Landing Page",
+      "technologies": "Vue · Nuxt.js · Vuetify · Vuex · GraphQL",
+      "description": "Design e desenvolvimento de landing de marketing centrada no usuário com SEO otimizado. Inclui termos e condições, política de privacidade, planos de preços e FAQ."
+    },
+    "gmarBackoffice": {
+      "title": "Give Me A Ride Backoffice",
+      "technologies": "Vue · Nuxt.js · Vuetify · Vuex · GraphQL",
+      "description": "Desenvolvimento de página interna de verificação que agiliza controle e revisão de relatórios. Notificações em tempo real com GraphQL, melhorando a eficiência da equipe administrativa."
+    },
+    "pcppd": {
+      "title": "PCPPD",
+      "technologies": "Vue · Vuetify · Vuex · Firebase",
+      "description": "Plataforma colaborativa de programação com integração GitHub para edição de código, pull requests e comunicação em equipe."
+    },
+    "todo": {
+      "title": "Todo List",
+      "technologies": "Vue · Vuetify · TypeScript · Vite · Pinia",
+      "description": "Aplicação de lista de tarefas com Vue 3, Vite e Pinia. Permite adicionar, editar e excluir tarefas."
+    },
+    "ecommerce": {
+      "title": "Ecommerce",
+      "technologies": "Angular · Tailwind · PrimeNG · Firebase · TypeScript",
+      "description": "Aplicação de e-commerce com Angular, Tailwind, PrimeNG, Firebase e TypeScript. Permite adicionar, editar e excluir produtos."
+    },
+    "lacasagallery": {
+      "title": "La Casa Gallery",
+      "technologies": "Shopify · Liquid · Componentes custom em Liquid",
+      "description": "Galeria e loja online de arte e presentes desenvolvida com Shopify. Inclui componentes custom implementados em Liquid. Coleções, blog e envios para todo o país."
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "text": "Aberto a novas oportunidades e colaborações. Envie uma mensagem pelo formulário ou conecte no",
+    "linkedIn": "LinkedIn",
+    "textEnd": ".",
+    "formName": "Nome",
+    "formEmail": "Email",
+    "formMessage": "Mensagem",
+    "formPlaceholderName": "Seu nome",
+    "formPlaceholderEmail": "seu@email.com",
+    "formPlaceholderMessage": "Sua mensagem...",
+    "messageMinHint": "Mínimo {{count}} caracteres",
+    "charCountMin": "mín",
+    "formSubmit": "Enviar mensagem",
+    "formSending": "Enviando...",
+    "formSuccess": "Obrigado! Responderei em breve.",
+    "formError": "Algo deu errado. Tente novamente ou envie um email.",
+    "or": "ou"
+  },
+  "footer": {
+    "madeWith": "Feito com",
+    "tech": "React e Vite"
+  }
+}
