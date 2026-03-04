@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import Navbar from "./Navbar";
 import "./CSS Files/App.css";
 import About from "./About";
+import Experience from "./Experience";
 import Projects from "./Projects";
 import TechnicalTests from "./TechnicalTests";
 import Contact from "./Contact";
@@ -66,6 +67,7 @@ function App() {
 		<div>
 			<Navbar />
 			<About />
+			<Experience />
 			<Projects />
 			<TechnicalTests />
 			<Contact />

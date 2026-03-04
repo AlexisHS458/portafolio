@@ -5,10 +5,38 @@
   },
   "nav": {
     "about": "About",
+    "experience": "Experience",
     "projects": "Projects",
     "technicalTests": "Technical tests",
     "contact": "Contact",
     "resume": "Resume"
+  },
+  "experience": {
+    "title": "Experience",
+    "job1": {
+      "company": "Dinamic SW",
+      "role": "Frontend Web Developer",
+      "period": "Feb 2025 – Jun 2025",
+      "description": "POS cash management system with React and Context API. Reusable components, structured validation, and REST integration for real-time operations and reporting. 30% development time reduction, 40% form completion success."
+    },
+    "job2": {
+      "company": "Main Core SA de CV",
+      "role": "Frontend Web Developer",
+      "period": "Oct 2023 – Aug 2024",
+      "description": "Responsive government platform with Vue and Pinia. Maintainable modules, REST APIs, improved menus and file upload. Recognized for project structure and code reuse; spearheaded file upload redesign."
+    },
+    "job3": {
+      "company": "Overclock Studios",
+      "role": "Frontend Web Developer",
+      "period": "Feb 2022 – Sep 2023",
+      "description": "Ecommerce and service platforms with React, Next.js (SSR) and TypeScript. Payment integration (Stripe, Square), Strapi CMS and REST APIs. SEO with SSR. Led Codisa, Forprint and OurMaids redesigns; internal payment interface for Forprint."
+    },
+    "job4": {
+      "company": "Ugusoft S de RL",
+      "role": "Frontend Web Developer",
+      "period": "Mar 2021 – Jan 2023",
+      "description": "Web platform with Vue, Nuxt, Vuex and GraphQL. Real-time notifications, responsive design. Figma prototypes to production. Frontend supervisor and team coordination. SEO optimization and internal verification page."
+    }
   },
   "technicalTests": {
     "title": "Technical tests",

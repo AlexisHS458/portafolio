@@ -5,10 +5,38 @@
   },
   "nav": {
     "about": "Sobre",
+    "experience": "Experiência",
     "projects": "Projetos",
     "technicalTests": "Provas técnicas",
     "contact": "Contato",
     "resume": "Currículo"
+  },
+  "experience": {
+    "title": "Experiência",
+    "job1": {
+      "company": "Dinamic SW",
+      "role": "Desenvolvedor Frontend Web",
+      "period": "Fev 2025 – Jun 2025",
+      "description": "Sistema POS de gestão de caixa com React e Context API. Componentes reutilizáveis, validação estruturada e integração REST para operações e relatórios em tempo real. Redução de 30% no tempo de desenvolvimento e 40% na conclusão de formulários."
+    },
+    "job2": {
+      "company": "Main Core SA de CV",
+      "role": "Desenvolvedor Frontend Web",
+      "period": "Out 2023 – Ago 2024",
+      "description": "Plataforma governamental responsiva com Vue e Pinia. Módulos sustentáveis, APIs REST, melhoria de menus e carga de arquivos. Reconhecido pela estrutura do projeto e reutilização de código; redesenho do fluxo de upload."
+    },
+    "job3": {
+      "company": "Overclock Studios",
+      "role": "Desenvolvedor Frontend Web",
+      "period": "Fev 2022 – Set 2023",
+      "description": "E-commerce e plataformas de serviços com React, Next.js (SSR) e TypeScript. Integração de pagamentos (Stripe, Square), Strapi CMS e APIs REST. SEO com SSR. Redesign da Codisa, Forprint e OurMaids; interface de pagamentos interna para Forprint."
+    },
+    "job4": {
+      "company": "Ugusoft S de RL",
+      "role": "Desenvolvedor Frontend Web",
+      "period": "Mar 2021 – Jan 2023",
+      "description": "Plataforma web com Vue, Nuxt, Vuex e GraphQL. Notificações em tempo real, design responsivo. Protótipos Figma em produção. Supervisor de frontend e coordenação de equipe. SEO e página interna de verificação."
+    }
   },
   "technicalTests": {
     "title": "Provas técnicas",

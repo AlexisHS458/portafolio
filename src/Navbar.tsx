@@ -96,6 +96,9 @@ function Navbar() {
           <Link to="About" smooth={true} duration={500} onClick={closeMenu}>
             <li>{t("nav.about")}</li>
           </Link>
+          <Link to="Experience" smooth={true} duration={500} onClick={closeMenu}>
+            <li>{t("nav.experience")}</li>
+          </Link>
           <Link to="Projects" smooth={true} duration={500} onClick={closeMenu}>
             <li>{t("nav.projects")}</li>
           </Link>
@@ -154,6 +157,9 @@ function Navbar() {
         <ul className="nav-mobile-links">
           <Link to="About" smooth={true} duration={500} onClick={closeMenu}>
             <li>{t("nav.about")}</li>
+          </Link>
+          <Link to="Experience" smooth={true} duration={500} onClick={closeMenu}>
+            <li>{t("nav.experience")}</li>
           </Link>
           <Link to="Projects" smooth={true} duration={500} onClick={closeMenu}>
             <li>{t("nav.projects")}</li>
