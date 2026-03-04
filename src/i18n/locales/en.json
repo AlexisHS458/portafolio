@@ -6,8 +6,13 @@
   "nav": {
     "about": "About",
     "projects": "Projects",
+    "technicalTests": "Technical tests",
     "contact": "Contact",
     "resume": "Resume"
+  },
+  "technicalTests": {
+    "title": "Technical tests",
+    "subtitle": "Sample projects and technical exercises: Todo List and E-commerce built with Vue and Angular."
   },
   "hero": {
     "heyIm": "Hey, I'm Alexis",
@@ -98,6 +103,16 @@
       "title": "La Casa Gallery",
       "technologies": "Shopify · Liquid · Custom Liquid components",
       "description": "Online art and gift gallery and store built with Shopify. Custom components implemented in Liquid. Collections, blog, and nationwide shipping."
+    },
+    "roadStats": {
+      "title": "Highway Statistics",
+      "technologies": "Vue 2 · TypeScript · Bootstrap · Axios · Pinia",
+      "description": "Government system: upload highway statistics via Excel files, generate downloadable reports, and query historical data from 1990 to 2023."
+    },
+    "fintechBackoffice": {
+      "title": "Fintech Backoffice",
+      "technologies": "Vue 2 · Nuxt.js 2 · JavaScript · Vuetify · Axios · Vuex",
+      "description": "Internal panel for a fintech company: add companies, upload and manage clients, supervise operations, and deposit or withdraw balance."
     }
   },
   "contact": {

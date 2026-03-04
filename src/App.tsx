@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import "./CSS Files/App.css";
 import About from "./About";
 import Projects from "./Projects";
+import TechnicalTests from "./TechnicalTests";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
@@ -66,6 +67,7 @@ function App() {
 			<Navbar />
 			<About />
 			<Projects />
+			<TechnicalTests />
 			<Contact />
 			<Footer />
 			<ScrollToTop />

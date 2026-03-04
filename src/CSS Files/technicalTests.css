@@ -1,0 +1,43 @@
+#TechnicalTests {
+  min-height: 100vh;
+  padding: 8rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#TechnicalTests::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.technical-tests-title {
+  margin-bottom: 0.5rem;
+}
+
+.technical-tests-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  #TechnicalTests {
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  .technical-tests-subtitle {
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+  }
+}

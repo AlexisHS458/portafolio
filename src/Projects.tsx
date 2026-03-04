@@ -6,17 +6,16 @@ import forprint from "./Images/Forprint.png";
 import codisa from "./Images/Codisa.png";
 import OurMaids from "./Images/OurMaids.png";
 import gmar from "./Images/GMAR.png";
-import kun from "./Images/KUN.png";
-import ecommerce from "./Images/Ecommerce.png";
-import todo from "./Images/Todo.png";
 import casa from "./Images/Casa.png";
+import roadStatsImg from "./Images/RoadStats.png";
+import fintechBackofficeImg from "./Images/FintechBackoffice.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const FILTER_KEYS = ["all", "vue", "react", "angular", "next", "nuxt", "liquid"] as const;
-type FilterKey = (typeof FILTER_KEYS)[number];
+export type FilterKey = (typeof FILTER_KEYS)[number];
 
 const PROJECTS_LIST: {
 	id: string;
@@ -25,37 +24,33 @@ const PROJECTS_LIST: {
 	githubLink?: string;
 	tags: FilterKey[];
 }[] = [
+	{ id: "fintechBackoffice", image: fintechBackofficeImg, tags: ["vue", "nuxt"] },
+	{ id: "roadStats", image: roadStatsImg, tags: ["vue"] },
 	{ id: "lacasagallery", image: casa, siteLink: "https://www.lacasagallery.com/", tags: ["liquid"] },
 	{ id: "ourmaids", image: OurMaids, siteLink: "https://ourmaids.com/", tags: ["react", "next"] },
 	{ id: "codisa", image: codisa, siteLink: "https://codisa-ecommerce-store-dev.on.ocstudios.mx/", tags: ["vue", "nuxt"] },
-	{ id: "todo", image: todo, githubLink: "https://github.com/AlexisHS458/to-do-list", siteLink: "https://to-do-list-two-beryl-12.vercel.app/", tags: ["vue"] },
-	{ id: "ecommerce", image: ecommerce, githubLink: "https://github.com/AlexisHS458/ecommerce-app", siteLink: "https://ecommerce-prueba-bambu-prod.web.app/", tags: ["angular"] },
 	{ id: "forprint", image: forprint, tags: ["vue", "nuxt"] },
 	{ id: "gmarLanding", image: gmar, siteLink: "https://www.gmar.app/", tags: ["vue", "nuxt"] },
 	{ id: "gmarBackoffice", image: gmar, tags: ["vue", "nuxt"] },
-	{ id: "pcppd", image: kun, githubLink: "https://github.com/AlexisHS458/Proyecto_PCPPD", tags: ["vue"] },
 ];
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
 	title: string;
 	imageSrc: string;
 	githubLink?: string;
 	siteLink?: string;
 	technologies: string;
 	description: string;
-	tagKeys: FilterKey[];
 }
 
-function ProjectCard({
+export function ProjectCard({
 	title,
 	imageSrc,
 	githubLink,
 	siteLink,
 	technologies,
 	description,
-	tagKeys,
 }: ProjectCardProps) {
-	const { t } = useTranslation();
 	const cardRef = useRef<HTMLDivElement>(null);
 	const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
 	const [isHovering, setIsHovering] = useState(false);
@@ -119,16 +114,15 @@ function ProjectCard({
 							)}
 						</div>
 					</div>
-					{tagKeys.length > 0 && (
+					{technologies && (
 						<div className="project-tags">
-							{tagKeys.map((key) => (
-								<span key={key} className="project-tag">
-									{t(`projects.filters.${key}`)}
+							{technologies.split(" · ").filter(Boolean).map((tech, i) => (
+								<span key={`${tech}-${i}`} className="project-tag">
+									{tech.trim()}
 								</span>
 							))}
 						</div>
 					)}
-					<h3>{technologies}</h3>
 					<p>{description}</p>
 				</div>
 			</div>
@@ -172,7 +166,6 @@ function Projects() {
 						githubLink={proj.githubLink}
 						technologies={t(`projects.${proj.id}.technologies`)}
 						description={t(`projects.${proj.id}.description`)}
-						tagKeys={proj.tags}
 					/>
 				))}
 			</div>

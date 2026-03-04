@@ -99,6 +99,9 @@ function Navbar() {
           <Link to="Projects" smooth={true} duration={500} onClick={closeMenu}>
             <li>{t("nav.projects")}</li>
           </Link>
+          <Link to="TechnicalTests" smooth={true} duration={500} onClick={closeMenu}>
+            <li>{t("nav.technicalTests")}</li>
+          </Link>
           <Link to="Contact" smooth={true} duration={500} onClick={closeMenu}>
             <li>{t("nav.contact")}</li>
           </Link>
@@ -154,6 +157,9 @@ function Navbar() {
           </Link>
           <Link to="Projects" smooth={true} duration={500} onClick={closeMenu}>
             <li>{t("nav.projects")}</li>
+          </Link>
+          <Link to="TechnicalTests" smooth={true} duration={500} onClick={closeMenu}>
+            <li>{t("nav.technicalTests")}</li>
           </Link>
           <Link to="Contact" smooth={true} duration={500} onClick={closeMenu}>
             <li>{t("nav.contact")}</li>

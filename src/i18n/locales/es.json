@@ -6,8 +6,13 @@
   "nav": {
     "about": "Sobre mí",
     "projects": "Proyectos",
+    "technicalTests": "Pruebas técnicas",
     "contact": "Contacto",
     "resume": "CV"
+  },
+  "technicalTests": {
+    "title": "Pruebas técnicas",
+    "subtitle": "Proyectos de prueba y ejercicios técnicos: Todo List y E-commerce desarrollados con Vue y Angular."
   },
   "hero": {
     "heyIm": "Hola, soy Alexis",
@@ -98,6 +103,16 @@
       "title": "La Casa Gallery",
       "technologies": "Shopify · Liquid · Componentes custom en Liquid",
       "description": "Galería y tienda en línea de arte y obsequios desarrollada con Shopify. Incluye componentes custom implementados en Liquid. Colecciones, blog y envíos a toda la república."
+    },
+    "roadStats": {
+      "title": "Estadísticas de Carreteras",
+      "technologies": "Vue 2 · TypeScript · Bootstrap · Axios · Pinia",
+      "description": "Sistema para gobierno: carga de estadísticas de carreteras vía archivos Excel, generación de reportes descargables y consulta de historial desde 1990 hasta 2023."
+    },
+    "fintechBackoffice": {
+      "title": "Backoffice Fintech",
+      "technologies": "Vue 2 · Nuxt.js 2 · JavaScript · Vuetify · Axios · Vuex",
+      "description": "Panel interno para empresa fintech: alta de empresas, carga y gestión de clientes, supervisión de operaciones, y depósito o retiro de saldo."
     }
   },
   "contact": {
