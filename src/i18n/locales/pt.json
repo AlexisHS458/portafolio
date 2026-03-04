@@ -50,11 +50,11 @@
   },
   "projects": {
     "title": "Projetos",
+    "representativeImage": "Imagem apenas representativa",
     "filters": {
       "all": "Todos",
       "vue": "Vue",
       "react": "React",
-      "angular": "Angular",
       "next": "Next.js",
       "nuxt": "Nuxt.js",
       "liquid": "Liquid"
@@ -105,14 +105,14 @@
       "description": "Galeria e loja online de arte e presentes desenvolvida com Shopify. Inclui componentes custom implementados em Liquid. Coleções, blog e envios para todo o país."
     },
     "roadStats": {
-      "title": "Estatísticas de Rodovias",
+      "title": "Sistema de Informação Estatística",
       "technologies": "Vue 2 · TypeScript · Bootstrap · Axios · Pinia",
-      "description": "Sistema para governo: carga de estatísticas de rodovias via arquivos Excel, geração de relatórios para download e consulta de histórico de 1990 a 2023."
+      "description": "Plataforma governamental para o sistema de informação estatística do SICT. Carga em massa de arquivos Excel com dados de extensão de rodovias, transporte ferroviário e transporte motorizado federal. A partir dos dados carregados são geradas estatísticas por ano e relatórios para download, com histórico de 1990 a 2023."
     },
     "fintechBackoffice": {
       "title": "Backoffice Fintech",
       "technologies": "Vue 2 · Nuxt.js 2 · JavaScript · Vuetify · Axios · Vuex",
-      "description": "Painel interno para empresa fintech: cadastro de empresas, carga e gestão de clientes, supervisão de operações e depósito ou retirada de saldo."
+      "description": "Painel interno fintech: cadastro de empresas, gestão de clientes, depósitos e retiradas de saldo. Por usuário: movimentos, cartões vinculados, alteração de senha e dados. Quatro perfis, whitelist e restrições de cartão, modelos e pedidos de cartões. Operações: abonos, reembolsos, comissões, dispersões e retiradas."
     }
   },
   "contact": {

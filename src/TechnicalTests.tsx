@@ -27,7 +27,7 @@ const TECHNICAL_TESTS_LIST: {
 		image: ecommerce,
 		githubLink: "https://github.com/AlexisHS458/ecommerce-app",
 		siteLink: "https://ecommerce-prueba-bambu-prod.web.app/",
-		tags: ["angular"],
+		tags: [],
 	},
 	{
 		id: "pcppd",

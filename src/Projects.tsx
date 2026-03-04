@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
-const FILTER_KEYS = ["all", "vue", "react", "angular", "next", "nuxt", "liquid"] as const;
+const FILTER_KEYS = ["all", "vue", "react", "next", "nuxt", "liquid"] as const;
 export type FilterKey = (typeof FILTER_KEYS)[number];
 
 const PROJECTS_LIST: {
@@ -41,6 +41,7 @@ export interface ProjectCardProps {
 	siteLink?: string;
 	technologies: string;
 	description: string;
+	imageCaption?: string;
 }
 
 export function ProjectCard({
@@ -50,6 +51,7 @@ export function ProjectCard({
 	siteLink,
 	technologies,
 	description,
+	imageCaption,
 }: ProjectCardProps) {
 	const cardRef = useRef<HTMLDivElement>(null);
 	const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
@@ -97,6 +99,9 @@ export function ProjectCard({
 				>
 					<img className="images" src={imageSrc} alt={title} />
 				</a>
+				{imageCaption && (
+					<span className="project-image-caption">{imageCaption}</span>
+				)}
 				<div className="project-info">
 					<div className="project-title">
 						<h2>{title}</h2>
@@ -166,6 +171,7 @@ function Projects() {
 						githubLink={proj.githubLink}
 						technologies={t(`projects.${proj.id}.technologies`)}
 						description={t(`projects.${proj.id}.description`)}
+						imageCaption={proj.id === "fintechBackoffice" || proj.id === "roadStats" ? t("projects.representativeImage") : undefined}
 					/>
 				))}
 			</div>

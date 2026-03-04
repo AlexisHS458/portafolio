@@ -50,11 +50,11 @@
   },
   "projects": {
     "title": "Projects",
+    "representativeImage": "Representative image only",
     "filters": {
       "all": "All",
       "vue": "Vue",
       "react": "React",
-      "angular": "Angular",
       "next": "Next.js",
       "nuxt": "Nuxt.js",
       "liquid": "Liquid"
@@ -105,14 +105,14 @@
       "description": "Online art and gift gallery and store built with Shopify. Custom components implemented in Liquid. Collections, blog, and nationwide shipping."
     },
     "roadStats": {
-      "title": "Highway Statistics",
+      "title": "Statistics Information System",
       "technologies": "Vue 2 · TypeScript · Bootstrap · Axios · Pinia",
-      "description": "Government system: upload highway statistics via Excel files, generate downloadable reports, and query historical data from 1990 to 2023."
+      "description": "Government platform for the SICT statistics information system. Bulk upload of Excel files with road length data, rail transport, and federal motor transport. From uploaded data, yearly statistics and downloadable reports are generated, with history from 1990 to 2023."
     },
     "fintechBackoffice": {
       "title": "Fintech Backoffice",
       "technologies": "Vue 2 · Nuxt.js 2 · JavaScript · Vuetify · Axios · Vuex",
-      "description": "Internal panel for a fintech company: add companies, upload and manage clients, supervise operations, and deposit or withdraw balance."
+      "description": "Internal fintech panel: company onboarding, client management, balance deposits and withdrawals. Per user: movements, linked cards, password and profile updates. Four roles, whitelist and card restrictions, card models and card orders. Operations: credits, refunds, commissions, dispersions, and withdrawals."
     }
   },
   "contact": {
