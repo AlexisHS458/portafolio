@@ -114,7 +114,3 @@ src/
 
 - Node.js (versión indicada en `package.json`: `engines.node`)
 - npm o yarn
-
-## Licencia
-
-Puedes usar este proyecto como plantilla para tu propio portafolio. Si lo publicas, agradecería una mención al proyecto original, aunque no es obligatorio.
