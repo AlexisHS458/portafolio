@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import "./CSS Files/experience.css";
 
@@ -60,12 +61,12 @@ const HIGHLIGHT_PATTERNS = HIGHLIGHT_KEYWORDS.map((keyword) => ({
 	regex: new RegExp(`\\b(${escapeRegExp(keyword)})\\b`, "gi"),
 }));
 
-function highlightKeywords(text: string) {
-	let parts: (string | JSX.Element)[] = [text];
+function highlightKeywords(text: string): ReactNode[] {
+	let parts: (string | ReactNode)[] = [text];
 	let keyIndex = 0;
 
 	HIGHLIGHT_PATTERNS.forEach(({ regex }) => {
-		const newParts: (string | JSX.Element)[] = [];
+		const newParts: (string | ReactNode)[] = [];
 
 		parts.forEach((part) => {
 			if (typeof part !== "string") {
