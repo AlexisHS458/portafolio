@@ -13,29 +13,30 @@
   },
   "experience": {
     "title": "Experience",
+    "achievementsTitle": "Achievements",
     "job1": {
       "company": "Dinamic SW",
       "role": "Frontend Web Developer",
       "period": "Feb 2025 – Jun 2025",
-      "description": "POS cash management system with React and Context API. Reusable components, structured validation, and REST integration for real-time operations and reporting. 30% development time reduction, 40% form completion success."
+      "description": "• Developed and maintained a POS cash management system using React, focused on daily transactional operations and reporting.\n• Designed reusable and modular UI components to standardize form handling and reduce duplicated logic across the system.\n• Implemented structured validation flows to minimize user input errors and improve operational accuracy.\n• Managed shared state using Context API to ensure predictable data flow across different views.\n• Integrated REST APIs for real-time transaction updates and data synchronization.\nAchievements:\n• Reduced development time by 30% through reusable component architecture.\n• Increased form completion success rate by 40% due to improved validation and UX structure."
     },
     "job2": {
       "company": "Main Core SA de CV",
       "role": "Frontend Web Developer",
       "period": "Oct 2023 – Aug 2024",
-      "description": "Responsive government platform with Vue and Pinia. Maintainable modules, REST APIs, improved menus and file upload. Recognized for project structure and code reuse; spearheaded file upload redesign."
+      "description": "• Developed and enhanced a responsive government platform using Vue and Pinia, ensuring compatibility across desktop and mobile devices.\n• Structured frontend modules to improve maintainability and reduce tight coupling between components.\n• Integrated REST APIs to ensure consistent data management across different administrative sections.\n• Participated in cross-functional collaboration to align frontend functionality with backend requirements.\nAchievements:\n• Restructured menus, improved file uploading, and optimized information editing, making the process more intuitive compared to the previous software version.\n• Recognized for effectively organizing project structure and implementing code reuse strategies.\n• Spearheaded the redesign and streamlining of the file upload process."
     },
     "job3": {
       "company": "Overclock Studios",
       "role": "Frontend Web Developer",
       "period": "Feb 2022 – Sep 2023",
-      "description": "Ecommerce and service platforms with React, Next.js (SSR) and TypeScript. Payment integration (Stripe, Square), Strapi CMS and REST APIs. SEO with SSR. Led Codisa, Forprint and OurMaids redesigns; internal payment interface for Forprint."
+      "description": "• Built ecommerce and service-based platforms using React, Next.js (SSR), and TypeScript.\n• Implemented secure payment integrations with Stripe and Square, ensuring reliable transaction processing.\n• Connected frontend applications with Strapi CMS and REST APIs to enable dynamic content management.\n• Applied SEO optimization strategies using SSR and structured metadata configuration.\n• Contributed to UI/UX improvements through Figma-based collaboration and iterative design updates.\nAchievements:\n• Led redesign of Codisa's ecommerce page, improving user experience with enhanced features.\n• Created an efficient internal payment visualization interface for Forprint.\n• Redesigned OurMaids' website, improving SEO and restructuring information.\n• Integrated backend for Codisa, facilitating easy addition of banners or products and automated stock display."
     },
     "job4": {
       "company": "Ugusoft S de RL",
       "role": "Frontend Web Developer",
       "period": "Mar 2021 – Jan 2023",
-      "description": "Web platform with Vue, Nuxt, Vuex and GraphQL. Real-time notifications, responsive design. Figma prototypes to production. Frontend supervisor and team coordination. SEO optimization and internal verification page."
+      "description": "• Developed a web platform using Vue, Nuxt.js, Vuex, and GraphQL, focusing on responsive design and usability.\n• Implemented GraphQL-based real-time notifications to improve administrative monitoring.\n• Designed and translated UI prototypes from Figma into production-ready interfaces.\n• Supervised frontend development tasks and coordinated team activities as Department Manager.\n• Supported performance improvements and structural refinements within the application.\nAchievements:\n• Optimized SEO (Website Impact Metrics) for 5–10 daily visits with fast load times.\n• Developed a user-focused internal page for verification, streamlining control and report reviews.\n• Implemented GraphQL notifications for instant real-time updates, improving admin efficiency."
     }
   },
   "technicalTests": {

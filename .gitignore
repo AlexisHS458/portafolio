@@ -1,3 +1,11 @@
 node_modules
 .env
 .env.local
+.vscode
+.DS_Store
+.cursorrules
+.cursorignore
+.cursor
+.gitignore
+.package-lock.json
+.package.json
