@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import "./CSS Files/experience.css";
 
-const EXPERIENCE_IDS = ["job1", "job2", "job3", "job4"] as const;
+const EXPERIENCE_IDS = ["job1", "job2", "job3", "job4", "job5"] as const;
 type ExperienceId = (typeof EXPERIENCE_IDS)[number];
 
 interface Job {
@@ -36,6 +36,12 @@ const HIGHLIGHT_KEYWORDS = [
 	"API",
 	"SSR",
 	"POS",
+	"NetSuite",
+	"Vuetify",
+	"Axios",
+	"Nuxt.js",
+	"Excel",
+	"SICT",
 	// Estado
 	"Context API",
 	"Pinia",
@@ -119,7 +125,9 @@ function ExperienceDescription({
 	}
 
 	const achievementsIndex = lines.findIndex((line) =>
-		/^(logros|achievements|erfolge)[:：]?$/i.test(line)
+		/^(logros(\s+destacados)?|achievements?|conquistas(\s+destacadas)?|erfolge)\s*[:：]?\s*$/i.test(
+			line.trim()
+		)
 	);
 
 	const responsibilities =

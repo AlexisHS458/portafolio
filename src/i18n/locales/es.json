@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "Alexis Herrera Saucedo | Desarrollador Frontend",
-    "description": "Desarrollador Frontend con más de 3 años de experiencia creando aplicaciones web responsivas con Vue, React y Next.js. Portafolio y contacto."
+    "title": "Alexis Herrera Saucedo | Desarrollador Frontend — Vue, React, Next.js",
+    "description": "Desarrollador Frontend con más de 4 años en POS, sistemas gubernamentales y backoffices fintech. Vue, React, Next.js, TypeScript. Core Web Vitals y SEO técnico. México · remoto.",
+    "keywords": "Alexis Herrera Saucedo, desarrollador frontend, Vue.js, React, Next.js, TypeScript, Nuxt.js, POS, fintech, SICT, remoto México"
   },
   "nav": {
     "about": "Sobre mí",
@@ -15,50 +16,61 @@
     "title": "Experiencia",
     "achievementsTitle": "Logros",
     "job1": {
-      "company": "Dinamic SW",
-      "role": "Desarrollador Frontend Web",
-      "period": "Feb 2025 – Jun 2025",
-      "description": "• Sistema POS de gestión de caja con React para operaciones transaccionales diarias y reporting.\n• Componentes de UI reutilizables y modulares para estandarizar el manejo de formularios y reducir lógica duplicada.\n• Flujos de validación estructurados para minimizar errores de entrada y mejorar la precisión operativa.\n• Estado compartido gestionado con Context API para un flujo de datos predecible entre vistas.\n• Integración de APIs REST para actualizaciones en tiempo real y sincronización de datos.\nLogros:\n• Reducción del 30% en tiempo de desarrollo gracias a la arquitectura de componentes reutilizables.\n• Aumento del 40% en la tasa de formularios completados con éxito por mejoras en validación y estructura UX."
+      "company": "Nextline",
+      "role": "Desarrollador Frontend (Freelance)",
+      "period": "Dic 2025 – Actualidad",
+      "description": "• Equipo de dos desarrolladores frontend construyendo un backoffice para una plataforma de wallet digital (Vue 2 + Nuxt.js + Vuex + Vuetify), con tres roles: Admin General, Admin Empresa y Admin Subempresa.\n• Construí vistas de movimientos y transacciones segmentadas por nivel de entidad (empresa, subempresa, usuario), con feeds de actividad contextualizados por rol.\n• Desarrollé vistas de detalle de usuario: gestión de credenciales (correo, contraseña), asignación de tarjeta física, visualización de datos y bloqueo — cada acción con su propio flujo de validación.\n• Construí flujos de pedido de tarjetas y un módulo de aclaraciones para que los administradores levanten, rastreen y resuelvan incidencias.\n• Gestioné estado compartido con Vuex e integración REST vía Axios, coordinándome con el otro dev para mantener el flujo de datos consistente.\nLogros:\n• Entregué 5 módulos cubriendo los tres roles de administrador como parte de un equipo de dos.\n• Alineamos la estructura de Vuex y convenciones de componentes desde el inicio, evitando retrabajo conforme creció la plataforma."
     },
     "job2": {
-      "company": "Main Core SA de CV",
-      "role": "Desarrollador Frontend Web",
-      "period": "Oct 2023 – Ago 2024",
-      "description": "• Desarrollo y mejora de una plataforma gubernamental responsive usando Vue y Pinia, asegurando compatibilidad en escritorio y dispositivos móviles.\n• Estructuración de módulos frontend para mejorar la mantenibilidad y reducir el acoplamiento entre componentes.\n• Integración de APIs REST para garantizar un manejo de datos consistente entre distintas secciones administrativas.\n• Colaboración con equipos cross‑functional para alinear la funcionalidad de frontend con los requisitos de backend.\nLogros:\n• Reestructuración de menús, mejora de la carga de archivos y optimización de la edición de información, haciendo el proceso más intuitivo frente a la versión anterior del software.\n• Reconocimiento por la organización efectiva de la estructura del proyecto y la implementación de estrategias de reutilización de código.\n• Liderazgo en el rediseño y simplificación del flujo de carga de archivos."
+      "company": "Dinamic SW",
+      "role": "Desarrollador Web Frontend",
+      "period": "Feb 2025 – Jun 2025",
+      "description": "• Proyecto en equipo: sistema POS de gestión de caja integrado con NetSuite ERP para una cadena de restaurantes. Cubre corte de caja al cierre de turno, cierre de lote de terminales, acumulación de cupones y reportes bancarios.\n• Construí las pantallas de acumulación de cupones — visualización, validación y conexión con la generación de órdenes de venta en NetSuite.\n• Desarrollé reportes de corresponsales bancarios (Santander, Banamex, Scotiabank) y anexo de cupones, resumiendo datos por tipo de pago y moneda por turno.\n• Construí componentes reutilizables adoptados en varios módulos, manteniendo patrones de UI consistentes y reduciendo trabajo repetido.\nLogros:\n• Las pantallas de cupones y reportes se conectan directamente con NetSuite, dando a los supervisores cifras precisas al cierre sin captura manual entre sistemas."
     },
     "job3": {
-      "company": "Overclock Studios",
-      "role": "Desarrollador Frontend Web",
-      "period": "Feb 2022 – Sep 2023",
-      "description": "• Desarrollo de plataformas de ecommerce y servicios usando React, Next.js (SSR) y TypeScript.\n• Implementación de integraciones de pago seguras con Stripe y Square, asegurando un procesamiento confiable de transacciones.\n• Conexión de aplicaciones frontend con Strapi CMS y APIs REST para habilitar gestión dinámica de contenido.\n• Aplicación de estrategias de optimización SEO mediante SSR y configuración de metadatos estructurados.\n• Contribución a mejoras de UI/UX mediante colaboración en Figma y ciclos iterativos de diseño.\nLogros:\n• Liderazgo en el rediseño de la página ecommerce de Codisa, mejorando la experiencia de usuario con nuevas funcionalidades.\n• Creación de una interfaz interna eficiente de visualización de pagos para Forprint.\n• Rediseño del sitio de OurMaids, mejorando el SEO y reestructurando la información.\n• Integración con backend para Codisa, facilitando la adición de banners o productos y la visualización automática de stock."
+      "company": "Main Core SA de CV",
+      "role": "Desarrollador Web Frontend",
+      "period": "Oct 2023 – Ago 2024",
+      "description": "• Frontend construido desde cero para el sistema oficial de estadísticas de transporte de la SICT (Secretaría de Infraestructura, Comunicaciones y Transportes). Maneja carga masiva de Excel con datos de red carretera, transporte ferroviario y autotransporte federal, genera reportes anuales y almacena registros históricos de 1990 a 2023.\n• Estructuré el frontend con componentes reutilizables desde el inicio, estandarizando la visualización de datos y los patrones de formularios en todos los módulos.\n• Construí el flujo de carga masiva de Excel conectado al pipeline de reportes — los datos se procesan y los reportes quedan disponibles para descarga automáticamente.\n• Agregué vistas de estadísticas en pantalla para que los administradores consulten cifras históricas por año sin necesidad de generar un reporte cada vez.\nLogros:\n• Módulo de configuración de títulos de PDF — los administradores definen encabezados de reportes desde la plataforma, sin edición manual de documentos."
     },
     "job4": {
+      "company": "Overclock Studios",
+      "role": "Desarrollador Web Frontend (Freelance / Part-time)",
+      "period": "Feb 2022 – Sep 2023",
+      "description": "• Plataformas ecommerce y de servicios con React, Next.js (SSR) y TypeScript para varios clientes. Foco en integraciones de pago, conexión con CMS y SEO.\n• Integré pagos con Stripe y Square con manejo seguro de sesión en dos clientes ecommerce en producción.\n• Conecté frontends con Strapi CMS vía REST — los clientes gestionan catálogos, banners y stock sin intervención del equipo de desarrollo.\n• Apliqué SSR y metadatos estructurados para mejorar Core Web Vitals e indexabilidad en los sitios de los clientes.\nLogros:\n• Codisa: integración con Strapi CMS para que el cliente gestione inventario y promociones de forma autónoma, eliminando la dependencia del equipo de dev para actualizaciones de contenido.\n• Ourmaids: reestructura SSR-first que mejoró la visibilidad en buscadores y la jerarquía de contenido.\n• Forprint: interfaz interna de visualización de pagos que redujo el esfuerzo de reporte manual del equipo de finanzas."
+    },
+    "job5": {
       "company": "Ugusoft S de RL",
-      "role": "Desarrollador Frontend Web",
+      "role": "Desarrollador Web Frontend y Líder Frontend",
       "period": "Mar 2021 – Ene 2023",
-      "description": "• Desarrollo de una plataforma web con Vue, Nuxt.js, Vuex y GraphQL, enfocada en diseño responsive y usabilidad.\n• Implementación de notificaciones en tiempo real basadas en GraphQL para mejorar el monitoreo administrativo.\n• Diseño y traducción de prototipos de UI desde Figma a interfaces listas para producción.\n• Supervisión de tareas de desarrollo frontend y coordinación de actividades del equipo como responsable de departamento.\n• Apoyo en mejoras de rendimiento y refinamiento estructural de la aplicación.\nLogros:\n• Optimización de SEO (Website Impact Metrics) para alcanzar entre 5 y 10 visitas diarias con tiempos de carga rápidos.\n• Desarrollo de una página interna de verificación centrada en el usuario, agilizando el control y la revisión de reportes.\n• Implementación de notificaciones GraphQL para actualizaciones en tiempo real, mejorando la eficiencia del equipo administrativo."
+      "description": "• Plataforma en producción con Vue 2 + Nuxt.js + Vuex + GraphQL. También lideré el equipo frontend.\n• Implementé suscripciones GraphQL para notificaciones en tiempo real, reemplazando polling y reduciendo la latencia de eventos críticos.\n• Traduje prototipos de Figma a interfaces de producción y realicé revisiones de código para mantener la calidad del equipo.\n• Gestioné la distribución de tareas y definí lineamientos de arquitectura como Líder Frontend.\nLogros:\n• Página interna de verificación y reportes que centralizó flujos administrativos y redujo la revisión manual.\n• Optimizaciones de SEO y rendimiento: tiempos de carga consistentes y mejor indexabilidad orgánica."
     }
   },
   "technicalTests": {
     "title": "Pruebas técnicas",
-    "subtitle": "Proyectos de prueba y ejercicios técnicos: Todo List y E-commerce desarrollados con Vue y Angular."
+    "subtitle": "Ejercicios con el mismo criterio: qué problema resuelven, tu rol, por qué ese stack y qué demuestran."
   },
   "hero": {
     "heyIm": "Hola, soy Alexis",
     "typewriter1": "Desarrollador Frontend",
     "typewriter2": "Vue, React y Next.js",
-    "typewriter3": "Código limpio y rendimiento",
-    "intro": "Desarrollador Frontend con más de 3 años de experiencia creando aplicaciones web responsivas y mantenibles con Vue, React y Next.js. Enfocado en código limpio, optimización del rendimiento y soluciones prácticas que mejoran la experiencia de usuario.",
+    "typewriter3": "Datos precisos y UX clara",
+    "intro": "Desarrollador Frontend con más de 4 años construyendo interfaces donde la precisión de datos y la complejidad de flujos importan: POS, sistemas estadísticos gubernamentales y backoffices financieros. Convierto lógica de negocio en UI clara y mantenible con Vue y React.",
     "contactMe": "Contáctame",
     "viewProjects": "Ver proyectos",
-    "highlights": "3+ años de experiencia · 8+ proyectos · Vue · React · Next.js",
+    "highlights": "4+ años · POS · SICT · Fintech · Vue · React · TypeScript",
     "scrollHint": "Desplázate para explorar"
   },
   "about": {
     "title": "Sobre mí",
-    "paragraph1": "Desarrollador Frontend con más de 3 años de experiencia construyendo aplicaciones web responsivas y mantenibles con Vue, React y Next.js. Experiencia integrando APIs REST y GraphQL, gestionando el estado con Pinia, Vuex y Context API, y desarrollando interfaces reutilizables basadas en componentes.",
-    "paragraph2": "He trabajado en plataformas de ecommerce, sistemas de gestión internos y sitios gubernamentales, centrándome en mejorar la usabilidad, optimizar flujos de trabajo y mantener estructuras de código escalables. Cómodo colaborando con equipos de backend para asegurar una integración fiable de APIs y un manejo consistente de datos.",
-    "paragraph3": "Enfocado en código limpio, optimización del rendimiento y ofrecer soluciones prácticas que mejoren la experiencia de usuario y la eficiencia del desarrollo.",
+    "paragraph1": "Desarrollador Frontend con más de 4 años construyendo interfaces para sistemas donde la precisión de datos y la complejidad de flujos importan: plataformas POS, sistemas estadísticos gubernamentales y backoffices financieros. Me enfoco en convertir lógica de negocio compleja en interfaces claras, confiables y fáciles de mantener.",
+    "paragraph2": "Mi stack principal es Vue y React; me importan los detalles que mantienen un proyecto saludable: componentes reutilizables, gestión de estado limpia e integración de APIs consistente. También aplico SEO técnico y buenas prácticas de rendimiento (Core Web Vitals, SSR/SSG, metadatos estructurados).",
+    "paragraph3": "Disponible para trabajo remoto e híbrido desde México. Colaboro estrechamente con backend y producto para entregar UI alineada al negocio y lista para producción.",
+    "paragraph4": "Educación: Ingeniería en Sistemas Computacionales — Instituto Politécnico Nacional (IPN), Ciudad de México, 2017–2022.",
+    "languageItems": [
+      "Español (nativo)",
+      "Inglés (B1 — en proceso de mejora)"
+    ],
     "tabs": {
       "technologies": "Tecnologías",
       "tools": "Herramientas",
@@ -70,6 +82,7 @@
       "stateManagement": "Gestión de estado",
       "apiIntegration": "Integración API",
       "stylingUi": "Estilos y UI",
+      "performanceSeo": "Rendimiento y SEO",
       "uxUi": "UX/UI",
       "toolsWorkflow": "Herramientas y flujo de trabajo",
       "coreStrengths": "Fortalezas",
@@ -79,6 +92,7 @@
   },
   "projects": {
     "title": "Proyectos",
+    "narrativeIntro": "Cada caso resume el problema del cliente o del producto, mi rol, la decisión técnica (y por qué frente a otras opciones) y el resultado u orientación de impacto.",
     "representativeImage": "Imagen representativa",
     "filters": {
       "all": "Todos",
@@ -91,57 +105,57 @@
     "codisa": {
       "title": "CODISA E-Commerce",
       "technologies": "Vue · Nuxt.js · Vuetify · Pinia · GraphQL Apollo",
-      "description": "Lideré el rediseño de la plataforma e-commerce de Codisa, mejorando la experiencia de usuario con nuevas funcionalidades. Integración con backend para gestión de banners y productos con stock automatizado. Incluye carrito, autenticación segura, múltiples direcciones de envío, historial de pedidos y lista de deseos."
+      "description": "Problema: el negocio necesitaba evolucionar el e‑commerce sin que cada ajuste de catálogo, banners o promociones pasara siempre por un despliegue de desarrollo.\n\nRol: lideré el rediseño frontend y la integración con backend/CMS orientada a que marketing y operaciones fueran más autónomos.\n\nDecisión técnica: Nuxt y Vue con Pinia y GraphQL Apollo para vistas de catálogo rápidas y datos de producto coherentes; headless/CMS frente a hardcodear contenido en el repo, porque escala mejor cuando el volumen de SKUs y campañas crece.\n\nResultado: el cliente puede gestionar inventario y promociones con menos dependencia del equipo de dev para cambios de contenido frecuentes."
     },
     "ourmaids": {
       "title": "OurMaids",
       "technologies": "React · Next.js · Tailwind · SquareUp · TypeScript",
-      "description": "Rediseño del sitio de OurMaids mejorando SEO y reestructurando la arquitectura de información. Landing y plataforma web moderna para un negocio de limpieza con soluciones de pago integradas."
+      "description": "Problema: el sitio necesitaba mejor visibilidad en buscadores y una jerarquía de contenido más clara para que el servicio se entendiera y convirtiera mejor.\n\nRol: rediseño frontend con enfoque SSR-first e integración de pagos (Square) en la nueva arquitectura.\n\nDecisión técnica: Next.js con React en lugar de SPA pura para servir HTML útil desde el servidor y afinar metadatos por ruta (mejor base para LCP y SEO); Tailwind para iterar landing rápido; TypeScript para contratos estables con integraciones de pago.\n\nResultado: estructura alineada a discovery orgánico y mensaje más claro para el usuario; la stack prioriza rendimiento percibido e indexación frente a un cliente monolítico sin SSR."
     },
     "forprint": {
       "title": "Forprint Backoffice",
       "technologies": "Vue · Nuxt.js · Vuetify · Pinia",
-      "description": "Creé una interfaz interna de visualización de pagos para Forprint. Panel de administración para gestionar transferencias bancarias, aceptar o rechazar transacciones y generar facturas de compra con flujos optimizados."
+      "description": "Problema: el área financiera invertía tiempo armando reportes y revisando pagos dispersos en lugar de decidir en un solo lugar.\n\nRol: diseñé y construí el panel interno para ver transferencias, aceptar o rechazar pagos y apoyar facturación.\n\nDecisión técnica: Nuxt + Vuetify + Pinia porque el backoffice es denso en tablas, filtros y flujos de aprobación; un UI kit maduro reduce tiempo frente a diseñar cada detalle a mano; Pinia simplifica estado frente a Vuex en este alcance.\n\nResultado: menos esfuerzo manual de reporte y decisiones sobre transacciones concentradas en una sola interfaz."
     },
     "gmarLanding": {
       "title": "Give Me A Ride Landing Page",
       "technologies": "Vue · Nuxt.js · Vuetify · Vuex · GraphQL",
-      "description": "Diseñé y desarrollé una landing de marketing centrada en el usuario con SEO optimizado. Incluye términos y condiciones, política de privacidad, planes de precios y sección de preguntas frecuentes."
+      "description": "Problema: la landing debía generar confianza (planes, FAQ, términos y privacidad) y ser discoverable sin sacrificar claridad en móvil.\n\nRol: diseño y desarrollo de la página de marketing y secciones legales.\n\nDecisión técnica: Nuxt sobre Vue SPA para SSR y metadatos por ruta; Vuetify para consistencia de layout y formularios; GraphQL donde el producto ya consumía APIs en ese estilo, evitando duplicar capas REST solo en landing.\n\nResultado: base indexable y mensaje de producto entendible con menos fricción que un sitio estático desconectado del ecosistema del proyecto."
     },
     "gmarBackoffice": {
       "title": "Give Me A Ride Backoffice",
       "technologies": "Vue · Nuxt.js · Vuetify · Vuex · GraphQL",
-      "description": "Desarrollé una página interna de verificación que agiliza el control y la revisión de reportes. Notificaciones en tiempo real con GraphQL, mejorando la eficiencia y el flujo del equipo administrativo."
+      "description": "Problema: el equipo administrativo necesitaba verificación y reportes sin esperar refrescos constantes ni revisar fuentes desconectadas.\n\nRol: desarrollé la página interna de verificación y los flujos de revisión; integré notificaciones en tiempo real.\n\nDecisión técnica: suscripciones GraphQL en lugar de polling para eventos críticos — menos latencia y menos carga improductiva; Vuex donde el estado debía compartirse entre módulos de admin ya acoplados al stack existente.\n\nResultado: flujos de revisión más inmediatos y centralizados frente a múltiples pantallas o consultas manuales repetidas."
     },
     "pcppd": {
       "title": "PCPPD",
       "technologies": "Vue · Vuetify · Vuex · Firebase",
-      "description": "Plataforma colaborativa de programación con integración a GitHub para edición de código, pull requests y comunicación en equipo."
+      "description": "Problema (ejercicio): demostrar colaboración en código con GitHub y un flujo tipo PR dentro de un alcance acotado.\n\nRol: frontend con integración a repositorios y vistas de trabajo en equipo.\n\nDecisión técnica: Vue + Firebase para auth y datos rápidos en demo sin montar backend propio; Vuex donde el estado de sesión/equipo debía ser explícito frente a solo props.\n\nResultado: prototipo que valida el flujo colaborativo planteado en la prueba, no un producto en producción."
     },
     "todo": {
       "title": "Todo List",
       "technologies": "Vue · Vuetify · TypeScript · Vite · Pinia",
-      "description": "Aplicación de lista de tareas con Vue 3, Vite y Pinia. Permite añadir, editar y eliminar tareas."
+      "description": "Problema (ejercicio): mostrar manejo limpio de estado y formularios en Vue 3 con tooling moderno.\n\nRol: app CRUD de tareas end-to-end.\n\nDecisión técnica: Pinia en lugar de Vuex por API más simple en proyectos pequeños; Vite por tiempos de dev; Vuetify para no invertir tiempo en componentes base.\n\nResultado: demo clara de patrones que extrapolo a sistemas más grandes."
     },
     "ecommerce": {
       "title": "Ecommerce",
       "technologies": "Angular · Tailwind · PrimeNG · Firebase · TypeScript",
-      "description": "Aplicación de ecommerce con Angular, Tailwind, PrimeNG, Firebase y TypeScript. Permite añadir, editar y eliminar productos."
+      "description": "Problema (ejercicio): panel de catálogo con persistencia sin desplegar backend custom.\n\nRol: CRUD de productos y flujo de administración.\n\nDecisión técnica: Angular + PrimeNG por formularios y tablas listas para backoffice; Firebase como BaaS frente a API propia en un demo con plazo corto.\n\nResultado: aplicación desplegable que demuestra modelo de datos y flujo admin completo en alcance de prueba."
     },
     "lacasagallery": {
       "title": "La Casa Gallery",
       "technologies": "Shopify · Liquid · Componentes custom en Liquid",
-      "description": "Galería y tienda en línea de arte y obsequios desarrollada con Shopify. Incluye componentes custom implementados en Liquid. Colecciones, blog y envíos a toda la república."
+      "description": "Problema: vender arte y regalos en línea con blog y envíos sin operar servidor ni pagos desde cero.\n\nRol: tema Shopify y componentes custom en Liquid donde el diseño lo requería.\n\nDecisión técnica: Shopify frente a storefront headless completo para acortar mantenimiento y usar checkout/hosting probado; Liquid solo en huecos donde el theme no bastaba (colecciones, bloques específicos).\n\nResultado: operación centrada en Shopify con personalización puntual, evitando reimplementar catálogo, impuestos y logística de checkout."
     },
     "roadStats": {
       "title": "Sistema de Información Estadística",
       "technologies": "Vue 2 · TypeScript · Bootstrap · Axios · Pinia",
-      "description": "Plataforma de gobierno para el sistema de información estadística del SICT. Carga masiva de archivos Excel con datos de longitud de carreteras, transportes ferroviarios y autotransporte federal. A partir de los datos cargados se generan estadísticas por año y reportes descargables, con historial desde 1990 hasta 2023."
+      "description": "Problema: el SICT necesitaba digitalizar estadísticas de transporte con histórico 1990–2023, carga masiva por Excel y reportes oficiales sin reeditar PDFs a mano cada vez.\n\nRol: frontend desde cero: carga, consultas por año en pantalla y configuración de salidas de reporte.\n\nDecisión técnica: Vue 2 + TypeScript + Pinia + Bootstrap por velocidad en formularios y tablas institucionales; Axios para enchufar el pipeline de procesamiento y descarga; TypeScript frente a JS puro por volumen de modelos de datos.\n\nResultado: módulo de títulos de PDF configurable desde la plataforma; consulta de cifras históricas sin generar un reporte en cada vista; menos edición manual de documentos."
     },
     "fintechBackoffice": {
-      "title": "Backoffice Fintech",
+      "title": "Backoffice Fintech (Wallet)",
       "technologies": "Vue 2 · Nuxt.js 2 · JavaScript · Vuetify · Axios · Vuex",
-      "description": "Panel interno fintech: alta de empresas, gestión de clientes, depósitos y retiros de saldo. Por usuario: movimientos, tarjetas vinculadas, cambio de contraseña y datos. Cuatro roles, whitelist y restricciones de tarjeta, modelos y pedidos de tarjetas. Consulta de operaciones: abonos, reembolsos, comisiones, dispersiones y retiros."
+      "description": "Problema: operar una wallet digital con varios niveles (general, empresa, subempresa, usuario final) sin perder trazabilidad ni mezclar permisos; pedidos de tarjeta y aclaraciones no podían quedar fuera del mismo contexto operativo.\n\nRol: frontend en equipo de dos — vistas de movimientos y transacciones por entidad, detalle de usuario (credenciales, tarjeta física, bloqueo), pedidos y módulo de aclaraciones; Vuex y REST con Axios alineados con el otro desarrollador.\n\nDecisión técnica: Vue 2 + Nuxt 2 + Vuetify + Vuex porque el backoffice ya seguía ese stack y la densidad de formularios/tablas encaja en Vuetify; Vuex frente a solo componentes aislados para compartir estado entre módulos de admin sin prop drilling masivo; REST con contrato explícito frente a GraphQL donde el backend no lo exponía.\n\nResultado: cinco módulos alineados a tres roles de administrador desde convenciones acordadas al inicio; cada acción crítica con su validación; menos retrabajo al crecer la plataforma."
     }
   },
   "contact": {

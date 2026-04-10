@@ -1,40 +1,59 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./CSS Files/about.css";
 
 type SkillCategory = { titleKey: string; items: string[] };
 
-const skillsByTab: { tabKey: string; categories: SkillCategory[] }[] = [
-	{
-		tabKey: "technologies",
-		categories: [
-			{ titleKey: "frontend", items: ["Vue 2/3", "Nuxt.js", "React", "Next.js", "Angular", "Shopify"] },
-			{ titleKey: "programmingLanguages", items: ["Javascript", "Typescript", "Liquid"] },
-			{ titleKey: "stateManagement", items: ["Pinia", "Vuex", "React Context API"] },
-			{ titleKey: "apiIntegration", items: ["REST API integration", "GraphQL", "Axios", "React Context API"] },
-			{ titleKey: "stylingUi", items: ["Tailwind CSS", "Chakra UI", "Mantine UI", "Vuetify", "Bootstrap", "Next UI"] },
-		],
-	},
-	{
-		tabKey: "tools",
-		categories: [
-			{ titleKey: "uxUi", items: ["Figma"] },
-			{ titleKey: "toolsWorkflow", items: ["Git", "GitHub", "Docker", "Agile"] },
-			{ titleKey: "coreStrengths", items: ["Reusable UI patterns", "Modular project structuring"] },
-		],
-	},
-	{
-		tabKey: "skills",
-		categories: [
-			{ titleKey: "softSkills", items: ["Communication", "Team Collaboration", "Time Management", "Problem Solving", "Adaptability"] },
-			{ titleKey: "languages", items: ["English Pre-Intermediate", "Spanish Native"] },
-		],
-	},
-];
+function buildSkillsByTab(languageItems: string[]): { tabKey: string; categories: SkillCategory[] }[] {
+	return [
+		{
+			tabKey: "technologies",
+			categories: [
+				{
+					titleKey: "frontend",
+					items: ["Vue 2/3", "Nuxt.js", "React", "Next.js (SSR/SSG)", "Shopify Liquid"],
+				},
+				{ titleKey: "programmingLanguages", items: ["JavaScript (ES2022+)", "TypeScript"] },
+				{ titleKey: "stateManagement", items: ["Pinia", "Vuex", "React Context API"] },
+				{ titleKey: "apiIntegration", items: ["REST", "GraphQL", "Axios", "Strapi CMS"] },
+				{
+					titleKey: "stylingUi",
+					items: ["Tailwind CSS", "Chakra UI", "Mantine UI", "Vuetify", "Bootstrap", "Next UI"],
+				},
+				{
+					titleKey: "performanceSeo",
+					items: ["Core Web Vitals", "SSR/SSG", "Structured metadata", "Lazy loading"],
+				},
+			],
+		},
+		{
+			tabKey: "tools",
+			categories: [
+				{ titleKey: "uxUi", items: ["Figma"] },
+				{ titleKey: "toolsWorkflow", items: ["Git", "GitHub", "Docker", "Agile/Scrum"] },
+				{ titleKey: "coreStrengths", items: ["Reusable components", "Clean state management", "Consistent API integration"] },
+			],
+		},
+		{
+			tabKey: "skills",
+			categories: [
+				{
+					titleKey: "softSkills",
+					items: ["Communication", "Team collaboration", "Time management", "Problem solving", "Adaptability"],
+				},
+				{ titleKey: "languages", items: languageItems },
+			],
+		},
+	];
+}
 
 function About() {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const [activeTab, setActiveTab] = useState(0);
+	const skillsByTab = useMemo(() => {
+		const languageItems = t("about.languageItems", { returnObjects: true }) as string[];
+		return buildSkillsByTab(languageItems);
+	}, [t, i18n.language]);
 	const current = skillsByTab[activeTab];
 
 	return (
@@ -47,6 +66,7 @@ function About() {
 					<p>{t("about.paragraph1")}</p>
 					<p>{t("about.paragraph2")}</p>
 					<p>{t("about.paragraph3")}</p>
+					<p>{t("about.paragraph4")}</p>
 				</div>
 				<div className="skills-panel" data-aos="fade-up" data-aos-delay="200">
 					<div className="skills-tabs" role="tablist">

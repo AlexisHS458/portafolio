@@ -28,6 +28,22 @@
   animation: fadeInUp 0.6s ease-out 0.1s forwards;
 }
 
+.projects-narrative-intro {
+  max-width: 42rem;
+  margin: -0.5rem auto 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.12s forwards;
+}
+
+.project-info .project-description {
+  white-space: pre-line;
+}
+
 .projects-filters {
   display: flex;
   flex-wrap: wrap;
@@ -257,10 +273,11 @@
 .project-info p {
   font-size: 0.95rem;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--text-secondary);
   margin: 0;
 }
+
 
 @media (max-width: 768px) {
   #Projects {

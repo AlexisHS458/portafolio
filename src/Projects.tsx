@@ -128,7 +128,7 @@ export function ProjectCard({
 							))}
 						</div>
 					)}
-					<p>{description}</p>
+					<p className="project-description">{description}</p>
 				</div>
 			</div>
 		</div>
@@ -149,6 +149,9 @@ function Projects() {
 			<h1 className="title" data-aos="fade-up">
 				{t("projects.title")}<span style={{ color: "var(--accent-color)" }}>.</span>
 			</h1>
+			<p className="projects-narrative-intro" data-aos="fade-up" data-aos-delay="40">
+				{t("projects.narrativeIntro")}
+			</p>
 			<div className="projects-filters" data-aos="fade-up" data-aos-delay="50">
 				{FILTER_KEYS.map((key) => (
 					<button

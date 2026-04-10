@@ -14,6 +14,18 @@ import ScrollToTop from "./ScrollToTop";
 
 const OG_IMAGE = "/src/Images/BetterSymb.png";
 
+const HTML_LANG: Record<string, string> = { en: "en", es: "es", pt: "pt", de: "de" };
+
+function setNamedMeta(name: string, content: string) {
+	let el = document.querySelector(`meta[name="${name}"]`);
+	if (!el) {
+		el = document.createElement("meta");
+		el.setAttribute("name", name);
+		document.head.appendChild(el);
+	}
+	el.setAttribute("content", content);
+}
+
 function App() {
 	const { i18n } = useTranslation();
 
@@ -33,21 +45,31 @@ function App() {
 		return () => mq.removeEventListener("change", handler);
 	}, []);
 
-	// SEO: title, meta description, Open Graph por idioma
+	// SEO: title, description, keywords, Open Graph, Twitter, canonical, JSON-LD
 	useEffect(() => {
-		const lang = i18n.language || "en";
+		const lang = (i18n.language || "en").split("-")[0];
 		const title = i18n.t("meta.title");
 		const description = i18n.t("meta.description");
-		document.title = title;
-		document.documentElement.lang = lang === "en" ? "en" : lang === "es" ? "es" : "pt";
+		const keywords = i18n.t("meta.keywords");
+		const origin = typeof window !== "undefined" ? window.location.origin : "";
+		const pageUrl =
+			typeof window !== "undefined" ? window.location.href.replace(/#.*$/, "") : origin ? `${origin}/` : "";
 
-		let metaDesc = document.querySelector('meta[name="description"]');
-		if (!metaDesc) {
-			metaDesc = document.createElement("meta");
-			metaDesc.setAttribute("name", "description");
-			document.head.appendChild(metaDesc);
+		document.title = title;
+		document.documentElement.lang = HTML_LANG[lang] ?? "en";
+
+		setNamedMeta("description", description);
+		setNamedMeta("keywords", keywords);
+		setNamedMeta("author", "Alexis Herrera Saucedo");
+		setNamedMeta("robots", "index, follow");
+
+		let canonical = document.querySelector('link[rel="canonical"]');
+		if (!canonical) {
+			canonical = document.createElement("link");
+			canonical.setAttribute("rel", "canonical");
+			document.head.appendChild(canonical);
 		}
-		metaDesc.setAttribute("content", description);
+		canonical.setAttribute("href", pageUrl || `${origin}/`);
 
 		const setOg = (property: string, content: string) => {
 			let el = document.querySelector(`meta[property="${property}"]`);
@@ -58,9 +80,59 @@ function App() {
 			}
 			el.setAttribute("content", content);
 		};
+		const ogLocale =
+			lang === "es" ? "es_MX" : lang === "pt" ? "pt_BR" : lang === "de" ? "de_DE" : "en_US";
+		const imageUrl = `${origin}${OG_IMAGE}`;
+
+		setOg("og:type", "website");
+		setOg("og:url", pageUrl || `${origin}/`);
+		setOg("og:locale", ogLocale);
+		setOg("og:site_name", "Alexis Herrera Saucedo");
 		setOg("og:title", title);
 		setOg("og:description", description);
-		setOg("og:image", `${typeof window !== "undefined" ? window.location.origin : ""}${OG_IMAGE}`);
+		setOg("og:image", imageUrl);
+
+		setNamedMeta("twitter:card", "summary_large_image");
+		setNamedMeta("twitter:title", title);
+		setNamedMeta("twitter:description", description);
+		setNamedMeta("twitter:image", imageUrl);
+
+		const personSchema = {
+			"@context": "https://schema.org",
+			"@type": "Person",
+			name: "Alexis Herrera Saucedo",
+			jobTitle: "Frontend Developer",
+			url: pageUrl || `${origin}/`,
+			email: "alexishs451@gmail.com",
+			telephone: "+52-458-102-3799",
+			image: imageUrl,
+			sameAs: [
+				"https://www.linkedin.com/in/alexishs/",
+				"https://github.com/AlexisHS458",
+			],
+			address: {
+				"@type": "PostalAddress",
+				addressCountry: "MX",
+			},
+			knowsAbout: [
+				"Vue.js",
+				"React",
+				"Next.js",
+				"Nuxt.js",
+				"TypeScript",
+				"Frontend development",
+				"Core Web Vitals",
+				"Technical SEO",
+			],
+		};
+
+		const existingLd = document.getElementById("schema-person");
+		if (existingLd) existingLd.remove();
+		const ldScript = document.createElement("script");
+		ldScript.id = "schema-person";
+		ldScript.type = "application/ld+json";
+		ldScript.textContent = JSON.stringify(personSchema);
+		document.head.appendChild(ldScript);
 	}, [i18n.language]);
 
 	return (
