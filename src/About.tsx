@@ -13,7 +13,7 @@ function buildSkillsByTab(languageItems: string[]): { tabKey: string; categories
 					titleKey: "frontend",
 					items: ["Vue 2/3", "Nuxt.js", "React", "Next.js (SSR/SSG)", "Shopify Liquid"],
 				},
-				{ titleKey: "programmingLanguages", items: ["JavaScript (ES2022+)", "TypeScript"] },
+				{ titleKey: "programmingLanguages", items: ["JavaScript", "TypeScript"] },
 				{ titleKey: "stateManagement", items: ["Pinia", "Vuex", "React Context API"] },
 				{ titleKey: "apiIntegration", items: ["REST", "GraphQL", "Axios", "Strapi CMS"] },
 				{
@@ -22,7 +22,7 @@ function buildSkillsByTab(languageItems: string[]): { tabKey: string; categories
 				},
 				{
 					titleKey: "performanceSeo",
-					items: ["Core Web Vitals", "SSR/SSG", "Structured metadata", "Lazy loading"],
+					items: ["SSR/SSG", "Structured metadata", "Lazy loading"],
 				},
 			],
 		},

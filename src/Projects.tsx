@@ -25,10 +25,10 @@ const PROJECTS_LIST: {
 	tags: FilterKey[];
 }[] = [
 	{ id: "fintechBackoffice", image: fintechBackofficeImg, tags: ["vue", "nuxt"] },
-	{ id: "roadStats", image: roadStatsImg, tags: ["vue"] },
+	{ id: "roadStats", image: roadStatsImg, tags: ["vue", "nuxt"] },
 	{ id: "lacasagallery", image: casa, siteLink: "https://www.lacasagallery.com/", tags: ["liquid"] },
 	{ id: "ourmaids", image: OurMaids, siteLink: "https://ourmaids.com/", tags: ["react", "next"] },
-	{ id: "codisa", image: codisa, siteLink: "https://codisa-ecommerce-store-dev.on.ocstudios.mx/", tags: ["vue", "nuxt"] },
+	{ id: "codisa", image: codisa, siteLink: "https://codisa-ecommerce-store-dev.on.ocstudios.mx/", tags: ["react", "next"] },
 	{ id: "forprint", image: forprint, tags: ["vue", "nuxt"] },
 	{ id: "gmarLanding", image: gmar, siteLink: "https://www.gmar.app/", tags: ["vue", "nuxt"] },
 	{ id: "gmarBackoffice", image: gmar, tags: ["vue", "nuxt"] },

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Alexis Herrera Saucedo | Frontend-Entwickler — Vue, React, Next.js",
-    "description": "Frontend-Entwickler mit 4+ Jahren in POS-Systemen, staatlichen Statistikplattformen und Fintech-Backoffices. Vue, React, Next.js, TypeScript. Core Web Vitals und technisches SEO. Mexiko · remote.",
+    "description": "Frontend-Entwickler mit 4+ Jahren in Fintech, Behörden und E‑Commerce. Vue, React, Next.js, TypeScript. Skalierbare Architektur, wiederverwendbare Komponenten, vorhersehbares State-Management. Mexiko · remote und hybrid.",
     "keywords": "Alexis Herrera Saucedo, Frontend-Entwickler, Vue.js, React, Next.js, TypeScript, Nuxt.js, POS, Fintech, SICT, Remote Mexiko"
   },
   "nav": {
@@ -10,7 +10,12 @@
     "projects": "Projekte",
     "technicalTests": "Technische Tests",
     "contact": "Kontakt",
-    "resume": "Lebenslauf"
+    "languageLabel": "Sprache",
+    "cvMenu": "CV",
+    "cvSpanish": "Spanisch",
+    "cvEnglish": "Englisch",
+    "cvSpanishTitle": "Lebenslauf Spanisch (PDF)",
+    "cvEnglishTitle": "Lebenslauf Englisch (PDF)"
   },
   "experience": {
     "title": "Erfahrung",
@@ -19,31 +24,31 @@
       "company": "Nextline",
       "role": "Frontend-Entwickler (Freelance)",
       "period": "Dez 2025 – Heute",
-      "description": "• Zwei Frontend-Entwickler bauen ein Backoffice für eine digitale Wallet-Plattform (Vue 2 + Nuxt.js + Vuex + Vuetify) mit drei Rollen: General Admin, Company Admin, Subcompany Admin.\n• Bewegungs- und Transaktionsansichten nach Entitätsebene (Firma, Subfirma, Nutzer) mit rollenkontextualisierten Aktivitäts-Feeds.\n• Nutzerdetailansichten: Zugangsdaten (E-Mail, Passwort), physische Karte zuweisen, Daten anzeigen und sperren — jeweils mit eigenem Validierungsflow.\n• Kartenbestellflows und Reklamationsmodul für Vorfälle.\n• Geteilter State mit Vuex, REST via Axios, Abstimmung mit dem zweiten Entwickler.\nErfolge:\n• Fünf Module für alle drei Admin-Rollen in einem Zwei-Personen-Team geliefert.\n• Vuex-Struktur und Komponentenkonventionen von Anfang an vereinheitlicht."
+      "description": "Backoffice für eine digitale Wallet-Plattform (Vue 2 + Nuxt.js + Vuex + Vuetify).\n• Vollständige Verwaltung von Unternehmen und Tochtergesellschaften: Erfassung, Verwaltung und Konfiguration für alle drei Admin-Rollen.\n• Finanzflüsse umgesetzt: Bewegungen, Auszahlungen, Abhebungen und Kartenbestellungen, nach Entitätsebene gefiltert.\n• Nutzerverwaltung: Zugangsdaten, Zuweisung physischer Karten, Kartenanzeige und Sperrung.\n• Projekt von Grund auf strukturiert: Modulorganisation, Vuex-Stores und Axios-Client als Basis für die gesamte Entwicklung.\n• Atomic Design für UI-Komponenten zur besseren Wiederverwendbarkeit und Wartung.\nErfolge\n• Komplettes Frontend als alleiniger Verantwortlicher von der Startstruktur bis zu Produktivmodulen.\n• Projektstruktur mit Atomic Design und unabhängigen Vuex-Modulen vorgeschlagen, die neue Anforderungen beim Plattformwachstum erleichterte."
     },
     "job2": {
       "company": "Dinamic SW",
       "role": "Frontend Web Developer",
       "period": "Feb 2025 – Jun 2025",
-      "description": "• Teamprojekt: POS-Kassenführung mit NetSuite-ERP für eine Restaurantkette. Schichtabschluss, Terminal-Batch, Coupon-Akkumulation, Bankreports.\n• Coupon-Akkumulations-Screens mit Anbindung an NetSuite-Verkaufsaufträge.\n• Korrespondentenbank-Reports (Santander, Banamex, Scotiabank) und Coupon-Anhänge.\n• Wiederverwendbare Komponenten über Module hinweg.\nErfolge:\n• Direkte NetSuite-Anbindung für präzise Schließzahlen ohne manuelle Doppelarbeit."
+      "description": "POS-Kassensystem mit NetSuite-ERP-Anbindung für MERA Corporation (React + TypeScript + React Context).\n• Couponakkumulations-Ansichten: Erfassung, Validierung nach Typ (allgemein, Prepaid, abgelaufen) und Anbindung an NetSuite-Verkaufsaufträge.\n• Ablauf zum Batch-Abschluss der Terminals, damit Vorgesetzte den Schichtabschluss pro Verkaufsstelle durchführen können.\n• Bankkorrespondentenberichte (Santander, Banamex, Scotiabank) und Coupon-Anhänge nach Zahlungsart, Währung und Schicht.\nErfolge\n• Wiederverwendbare Komponentenbibliothek, die das Team in mehreren Modulen übernahm und das Projekt beschleunigte."
     },
     "job3": {
       "company": "Main Core SA de CV",
       "role": "Frontend Web Developer",
       "period": "Okt 2023 – Aug 2024",
-      "description": "• Frontend von Grund auf für das offizielle Verkehrsstatistiksystem des SICT. Bulk-Excel-Upload für Straßennetz, Schiene und Bundesfernverkehr; Jahresreports; Historie 1990–2023.\n• Wiederverwendbare Komponenten und einheitliche Formularmuster.\n• Bulk-Upload an Reporting-Pipeline gekoppelt, automatische Report-Downloads.\n• On-Screen-Statistiken nach Jahr ohne jedes Mal neu zu generieren.\nErfolge:\n• PDF-Titelkonfiguration durch Admins ohne manuelle Dokumentbearbeitung."
+      "description": "Offizielles Verkehrsstatistiksystem des SICT, von Grund auf neu (Vue 3 + Nuxt 3 + Pinia + Axios). Verwaltet historische Daten 1990–2023 für Straße, Schiene und Bundesfernverkehr.\n• Frontend von Grund auf strukturiert: wiederverwendbare Architektur, Formularmuster und Datenanzeige in allen Modulen.\n• Hauptfluss: Massen-Excel-Upload, Bearbeitung und Validierung am Bildschirm, Einreichung zur Prüfung, automatisch generierbare Downloads. Zusätzlich historische Statistikansichten pro Jahr ohne jedes Mal einen Report zu erzeugen.\nErfolge\n• Modul für Admins zur Konfiguration von PDF-Titeln und Überschriften direkt in der Plattform, ohne manuelle Dokumentbearbeitung."
     },
     "job4": {
       "company": "Overclock Studios",
       "role": "Frontend Web Developer (Freelance / Teilzeit)",
       "period": "Feb 2022 – Sep 2023",
-      "description": "• E‑Commerce- und Serviceplattformen mit React, Next.js (SSR) und TypeScript. Schwerpunkt Zahlungsintegrationen, CMS und SEO.\n• Stripe und Square mit sicherer Session-Verwaltung für zwei Produktionskunden.\n• Frontends mit Strapi CMS per REST verbunden.\n• SSR und strukturierte Metadaten für Core Web Vitals und Indexierung.\nErfolge:\n• Codisa: Strapi für autonome Bestands- und Promotionsverwaltung.\n• Ourmaids: SSR-first Restrukturierung, bessere Sichtbarkeit.\n• Forprint: interne Zahlungsübersicht, weniger manueller Reportaufwand."
+      "description": "E‑Commerce- und Serviceplattformen mit React, Next.js (SSR) und TypeScript für mehrere Kunden. Fokus: Zahlungen, CMS, SEO.\n• Ourmaids: vollständiges Redesign für ein Reinigungsunternehmen in den USA, SquareUp-Zahlungen, SSR und SEO für bessere Sichtbarkeit.\n• Codisa: E‑Commerce von Grund auf mit Strapi CMS und Stripe: Login, Katalog, Detailansicht, Warenkorb mit Checkout.\n• Forprint: internes System zur Prüfung und Annahme/Ablehnung von Überweisungszahlungen für Finanzen.\nErfolge\n• Codisa: Kunde verwaltet Katalog und Aktionen in Strapi ohne Abhängigkeit vom Dev-Team.\n• Ourmaids: Redesign mit SSR und SEO verbesserte Rankings und Akquise."
     },
     "job5": {
       "company": "Ugusoft S de RL",
       "role": "Frontend Web Developer & Frontend Lead",
       "period": "Mär 2021 – Jan 2023",
-      "description": "• Produktionsplattform mit Vue 2 + Nuxt.js + Vuex + GraphQL; Leitung des Frontend-Teams.\n• GraphQL-Subscriptions für Echtzeitbenachrichtigungen statt Polling.\n• Figma-Prototypen in produktionsreife UI überführt, Code Reviews.\n• Aufgabenverteilung und Architekturrichtlinien als Frontend Lead.\nErfolge:\n• Interne Verifizierungs- und Reportseite, weniger manuelle Prüfung.\n• SEO- und Performance-Optimierungen mit konsistenten Ladezeiten."
+      "description": "Backoffice für die Gmar-Mobilitäts-App (Vue 2 + Nuxt.js + Vuex + GraphQL). Leitung eines dreiköpfigen Frontend-Teams.\n• Vollständiges Gmar-Backoffice: Nutzerverwaltung, Dokumentenprüfung und Freigabe, Fahrtstatistiken, Fahrzeuge, Bewertungen, Reports, Tabelle zulassiger Universitäten.\n• Echtzeit-Benachrichtigungen mit GraphQL.\n• Zwei Entwickler im Projekt geleitet: Aufgabenverteilung und Code Reviews.\n• Gmar-Landingpage von Grund auf entworfen und umgesetzt.\n• La Casa Gallery E‑Commerce mit Shopify und Custom-Elementen: Kollektionen, Warenkorb, Login.\nErfolge\n• Echtzeit-Benachrichtigungen mit Direktlink zur Dokumentenvalidierung des Nutzers, schnellere Freigabe.\n• SEO- und Ladezeitverbesserungen mit Wirkung in der Suchperformance."
     }
   },
   "technicalTests": {
@@ -55,7 +60,7 @@
     "typewriter1": "Frontend-Entwickler",
     "typewriter2": "Vue, React & Next.js",
     "typewriter3": "Präzise Daten, klare UX",
-    "intro": "Frontend-Entwickler mit 4+ Jahren für Oberflächen, bei denen Datenqualität und komplexe Abläufe zählen: POS, staatliche Statistiksysteme und Fintech-Backoffices. Ich übersetze Fachlogik in klare, wartbare UI mit Vue und React.",
+    "intro": "Frontend-Entwickler mit 4+ Jahren Webanwendungen für Fintech, Behörden und E‑Commerce. Spezialisiert auf React, Next.js und Vue — skalierbare Architektur, wiederverwendbare Komponenten, vorhersehbares State-Management. Erfahrung mit komplexen Systemen (POS, Finanz-Backoffices, Datenplattformen), die Abläufe verschlanken.",
     "contactMe": "Kontaktiere mich",
     "viewProjects": "Projekte ansehen",
     "highlights": "4+ Jahre · POS · SICT · Fintech · Vue · React · TypeScript",
@@ -63,13 +68,13 @@
   },
   "about": {
     "title": "Über mich",
-    "paragraph1": "Frontend-Entwickler mit 4+ Jahren für Systeme, in denen Datenpräzision und komplexe Flows wichtig sind: POS-Plattformen, staatliche Statistiksysteme und Finanz-Backoffices. Fokus: Geschäftslogik in klare, zuverlässige und wartbare Oberflächen zu übersetzen.",
-    "paragraph2": "Mein Schwerpunkt ist Vue und React; mir sind die Details wichtig, die Projekte gesund halten: wiederverwendbare Komponenten, sauberes State-Management und konsistente API-Integration. Zusätzlich technisches SEO und Performance (Core Web Vitals, SSR/SSG, strukturierte Metadaten).",
-    "paragraph3": "Verfügbar für Remote und Hybrid aus Mexiko. Enge Zusammenarbeit mit Backend und Produkt für produktionsreife, geschäftsnahe UI.",
-    "paragraph4": "Ausbildung: B.Sc. Computertechnik — Instituto Politécnico Nacional (IPN), Mexiko-Stadt, 2017–2022.",
+    "paragraph1": "Frontend-Entwickler mit 4+ Jahren Erfahrung in Webanwendungen für Fintech, Behörden und E‑Commerce. Spezialisiert auf React, Next.js und Vue mit Fokus auf skalierbare Architektur, wiederverwendbare Komponenten und vorhersehbares State-Management.",
+    "paragraph2": "Erfahrung mit komplexen Systemen (POS, Finanz-Backoffices, Datenplattformen), die operative Abläufe optimieren und manuelle Arbeit reduzieren. Hauptstack: Vue und React; REST/GraphQL-Integration, SSR/SSG, strukturierte Metadaten und Performance-Best-Practices.",
+    "paragraph3": "Verfügbar für Remote und Hybrid aus Mexiko. Zusammenarbeit mit Backend und Produkt für geschäftsnahe, produktionsreife UI.",
+    "paragraph4": "Ausbildung: B.Sc. Computersystemtechnik — Instituto Politécnico Nacional (IPN), Zacatecas, 2017–2022.",
     "languageItems": [
       "Spanisch (Muttersprache)",
-      "Englisch (B1 — in Verbesserung)"
+      "Englisch (B1)"
     ],
     "tabs": {
       "technologies": "Technologien",
@@ -92,7 +97,7 @@
   },
   "projects": {
     "title": "Projekte",
-    "narrativeIntro": "Jeder Fall fasst das Kunden- oder Produktproblem, meine Rolle, die technische Entscheidung (und warum statt Alternativen) sowie Ergebnis oder Wirkungsrichtung zusammen.",
+    "narrativeIntro": "Pro Projekt: etwas Kontext, was ich beigetragen habe und welcher Stack — genug Detail, ohne Roman.",
     "representativeImage": "Nur repräsentatives Bild",
     "filters": {
       "all": "Alle",
@@ -101,6 +106,61 @@
       "next": "Next.js",
       "nuxt": "Nuxt.js",
       "liquid": "Liquid"
+    },
+    "codisa": {
+      "title": "CODISA E-Commerce",
+      "technologies": "Next.js · React · Strapi CMS · Stripe · TypeScript",
+      "description": "E‑Commerce neu aufgesetzt mit Next.js und React, angebunden an Strapi als CMS und Stripe für Online‑Zahlungen. Ich habe den kompletten Flow abgedeckt: Katalog, Produktseite, Warenkorb und Checkout. Ziel war, dass Marketing und Operations Katalog und Aktionen in Strapi pflegen können, ohne bei jedem kleinen Update ein Deployment zu brauchen."
+    },
+    "ourmaids": {
+      "title": "OurMaids",
+      "technologies": "React · Next.js · Tailwind · SquareUp · TypeScript",
+      "description": "Neue Marketing‑Site für ein US‑Reinigungsunternehmen (privat und gewerblich). Frontend mit Next.js, SquareUp für Zahlungen und stärkeres SSR sowie Metadaten, damit das Angebot klarer wirkt und besser gefunden wird. Fokus: verständliche Message und kurzer Weg zur Buchung."
+    },
+    "forprint": {
+      "title": "Forprint Backoffice",
+      "technologies": "Vue · Nuxt.js · Vuetify · Pinia",
+      "description": "Internes Tool, damit Finance eingehende Überweisungen prüfen und an einem Ort annehmen oder ablehnen kann — statt Infos über Tabellen und Threads zu jagen. Umgesetzt mit Nuxt, Vuetify und Pinia, mit Tabellen und Filtern für den täglichen Dauerbetrieb."
+    },
+    "gmarLanding": {
+      "title": "Give Me A Ride Landing Page",
+      "technologies": "Vue · Nuxt.js · Vuetify · Vuex · GraphQL",
+      "description": "Öffentliche Landing für Gmar, die Mobilitäts‑App — gestaltet und gebaut mit Nuxt und Vuetify, mit guter Lesbarkeit auf dem Smartphone und klarer Struktur für Pläne, FAQs und rechtliche Texte. Passt zum Rest des Produkts und unterstützt die Marke."
+    },
+    "gmarBackoffice": {
+      "title": "Give Me A Ride Backoffice",
+      "technologies": "Vue · Nuxt.js · Vuetify · Vuex · GraphQL",
+      "description": "Betriebs‑Backoffice für Gmar: Nutzer, Dokumentenprüfung, Fahrten, Fahrzeuge, Reports und die Tabellen, die das Geschäft braucht. Benachrichtigungen laufen in Echtzeit über GraphQL, damit niemand sinnlos refresht; geteilter State zwischen den Modulen liegt in Vuex auf Nuxt."
+    },
+    "pcppd": {
+      "title": "PCPPD",
+      "technologies": "Vue · Vuetify · Vuex · Firebase",
+      "description": "Technische Übung mit Fokus auf Zusammenarbeit in GitHub im PR‑Stil. Frontend mit Vue und Vuetify, Firebase für Auth und Demo‑Daten ohne eigenes Backend — kompakt, aber zeigt, wie ich Teamflows strukturiere."
+    },
+    "todo": {
+      "title": "Todo List",
+      "technologies": "Vue · Vuetify · TypeScript · Vite · Pinia",
+      "description": "Weitere Übung: Todo‑App mit Vue 3, Pinia, Vite und Vuetify. Kleines CRUD, aber es zeigt State, Formulare und aktuelles Tooling ohne veraltete Boilerplates."
+    },
+    "ecommerce": {
+      "title": "Ecommerce",
+      "technologies": "Angular · Tailwind · PrimeNG · Firebase · TypeScript",
+      "description": "Produkt‑Admin‑Panel als Übung mit Angular, PrimeNG und Firebase für Persistenz. Form‑ und tabellenlastige Backoffice‑Muster und schnelles Deployment ohne eigene API im Übungszeitfenster."
+    },
+    "lacasagallery": {
+      "title": "La Casa Gallery",
+      "technologies": "Shopify · Liquid · Custom Liquid components",
+      "description": "Onlineshop auf Shopify für eine Kunst‑ und Geschenkgalerie. Theme angepasst und Liquid‑Bausteine ergänzt, wo das Design es verlangte — Featured‑Kollektionen, Warenkorb, Kundenlogin. Shopifys gehosteter Checkout hält Zahlungen und Betrieb schlanker als ein komplett maßgeschneiderter Storefront."
+    },
+    "roadStats": {
+      "title": "Verkehrsstatistiksystem (SICT)",
+      "technologies": "Vue 3 · Nuxt 3 · Pinia · Axios · TypeScript",
+      "description": "Offizielles Verkehrsstatistiksystem für SICT mit langen Historien und Massen‑Excel‑Import. Das Vue‑3‑/Nuxt‑3‑Frontend erlaubt Prüfung und Bearbeitung am Bildschirm, Download‑Reports und Jahresansichten, ohne PDFs bei jedem Zyklus neu manuell zu bauen. Pinia und Axios halten Client‑State und API‑Aufrufe am institutionellen Ablauf ausgerichtet."
+    },
+    "fintechBackoffice": {
+      "title": "Fintech Backoffice (Wallet)",
+      "technologies": "Vue 2 · Nuxt.js · Vuetify · Vuex · Axios · JavaScript",
+      "description": "Backoffice für eine digitale Wallet mit mehreren Admin‑Ebenen und Finanzflüssen (Bewegungen, Auszahlungen, Karten, Nutzer). Ich habe die App von Grund auf strukturiert — klare Module, Vuex‑Stores und REST‑Client mit Axios — und die Oberfläche in Vue 2, Nuxt und Vuetify mit wiederverwendbaren Komponenten (Atomic‑Design‑nah) gebaut, damit neue Anforderungen nicht in Einzelstücken enden."
     }
   },
   "contact": {

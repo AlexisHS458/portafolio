@@ -1,19 +1,67 @@
 import { useEffect, useRef, useState } from "react";
+import type { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faSun, faMoon, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon, faBars, faXmark, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 import "./CSS Files/Navbar.css";
 import Typewriter from "typewriter-effect/dist/core";
 import { supportedLanguages } from "./i18n";
 
-import Pdf from "./Images/CV.pdf";
+const CV_ES_PDF = "/cv/Alexis_Herrera_CV_ES.pdf";
+const CV_EN_PDF = "/cv/Alexis_Herrera_CV_EN.pdf";
 
 const THEME_KEY = "portfolio-theme";
 
+function closeAllNavDropdowns() {
+  document.querySelectorAll("details.nav-dropdown[open]").forEach((el) => {
+    el.removeAttribute("open");
+  });
+}
+
+function closeDetailsFromEvent(e: MouseEvent<HTMLElement>) {
+  e.currentTarget.closest("details")?.removeAttribute("open");
+}
+
+function LanguageDropdown() {
+  const { t, i18n } = useTranslation();
+  const langCode =
+    supportedLanguages.find(
+      ({ code }) => i18n.language === code || i18n.language.startsWith(`${code}-`)
+    )?.code ?? "en";
+  const currentName = supportedLanguages.find((l) => l.code === langCode)?.name ?? "English";
+
+  return (
+    <details className="nav-dropdown">
+      <summary className="nav-dropdown-summary">
+        {currentName}
+        <FontAwesomeIcon icon={faChevronDown} className="nav-dropdown-chevron" aria-hidden />
+      </summary>
+      <div className="nav-dropdown-panel" role="group" aria-label={t("nav.languageLabel")}>
+        {supportedLanguages.map(({ code, name }) => (
+          <button
+            key={code}
+            type="button"
+            className={`nav-dropdown-option${langCode === code ? " is-active" : ""}`}
+            onClick={(e) => {
+              i18n.changeLanguage(code);
+              closeDetailsFromEvent(e);
+            }}
+          >
+            {name}
+          </button>
+        ))}
+      </div>
+    </details>
+  );
+}
+
 function Navbar() {
   const { t, i18n } = useTranslation();
+  const langCode =
+    supportedLanguages.find(
+      ({ code }) => i18n.language === code || i18n.language.startsWith(`${code}-`)
+    )?.code ?? "en";
   const typewriterRef = useRef<HTMLSpanElement>(null);
   const navbarRef = useRef<HTMLElement>(null);
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -77,12 +125,33 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const onResumeClick = () => {
-    window.open(Pdf);
-    setMenuOpen(false);
-  };
+  useEffect(() => {
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target as Node;
+      document.querySelectorAll("details.nav-dropdown[open]").forEach((details) => {
+        if (!details.contains(target)) {
+          details.removeAttribute("open");
+        }
+      });
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, []);
 
-  const closeMenu = () => setMenuOpen(false);
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      setMenuOpen(false);
+      closeAllNavDropdowns();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    closeAllNavDropdowns();
+  };
 
   return (
     <>
@@ -119,28 +188,35 @@ function Navbar() {
           >
             <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
           </button>
-          <div className="lang-switcher">
-            {supportedLanguages.map(({ code }) => (
-              <button
-                key={code}
-                type="button"
-                className={`lang-btn ${i18n.language === code ? "active" : ""}`}
-                onClick={() => i18n.changeLanguage(code)}
-                title={code === "en" ? "English" : code === "es" ? "Español" : "Português"}
+          <LanguageDropdown />
+          <details className="nav-dropdown">
+            <summary className="nav-dropdown-summary">
+              {t("nav.cvMenu")}
+              <FontAwesomeIcon icon={faChevronDown} className="nav-dropdown-chevron" aria-hidden />
+            </summary>
+            <div className="nav-dropdown-panel" role="group" aria-label={t("nav.cvMenu")}>
+              <a
+                href={CV_ES_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={t("nav.cvSpanishTitle")}
+                className="nav-dropdown-option nav-dropdown-option--link"
+                onClick={closeDetailsFromEvent}
               >
-                {code.toUpperCase()}
-              </button>
-            ))}
-          </div>
-          <a href="https://www.linkedin.com/in/alexishs/" target="_blank" rel="noopener noreferrer" className="icons">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <a href="https://github.com/AlexisHS458" target="_blank" rel="noopener noreferrer" className="icons">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-          <a className="Resume" onClick={onResumeClick}>
-            {t("nav.resume")}
-          </a>
+                {t("nav.cvSpanish")}
+              </a>
+              <a
+                href={CV_EN_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={t("nav.cvEnglishTitle")}
+                className="nav-dropdown-option nav-dropdown-option--link"
+                onClick={closeDetailsFromEvent}
+              >
+                {t("nav.cvEnglish")}
+              </a>
+            </div>
+          </details>
         </div>
         <button
           type="button"
@@ -180,29 +256,51 @@ function Navbar() {
           >
             <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
           </button>
-          <div className="lang-switcher">
-            {supportedLanguages.map(({ code }) => (
+          <div className="nav-mobile-langs" role="group" aria-label={t("nav.languageLabel")}>
+            {supportedLanguages.map(({ code, name }) => (
               <button
                 key={code}
                 type="button"
-                className={`lang-btn ${i18n.language === code ? "active" : ""}`}
-                onClick={() => i18n.changeLanguage(code)}
+                className={`nav-mobile-lang-btn${langCode === code ? " is-active" : ""}`}
+                onClick={() => {
+                  i18n.changeLanguage(code);
+                  closeMenu();
+                }}
               >
-                {code.toUpperCase()}
+                {name}
               </button>
             ))}
           </div>
-          <div className="nav-mobile-social">
-            <a href="https://www.linkedin.com/in/alexishs/" target="_blank" rel="noopener noreferrer" className="icons">
-              <FontAwesomeIcon icon={faLinkedin} />
+          <div className="nav-mobile-cv" role="group" aria-label={t("nav.cvMenu")}>
+            <a
+              href={CV_ES_PDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={t("nav.cvSpanishTitle")}
+              className="nav-mobile-cv-link"
+              onClick={closeMenu}
+            >
+              <span className="nav-mobile-cv-link-kicker">{t("nav.cvMenu")}</span>
+              <span className="nav-mobile-cv-link-sep" aria-hidden>
+                {" · "}
+              </span>
+              {t("nav.cvSpanish")}
             </a>
-            <a href="https://github.com/AlexisHS458" target="_blank" rel="noopener noreferrer" className="icons">
-              <FontAwesomeIcon icon={faGithub} />
+            <a
+              href={CV_EN_PDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={t("nav.cvEnglishTitle")}
+              className="nav-mobile-cv-link"
+              onClick={closeMenu}
+            >
+              <span className="nav-mobile-cv-link-kicker">{t("nav.cvMenu")}</span>
+              <span className="nav-mobile-cv-link-sep" aria-hidden>
+                {" · "}
+              </span>
+              {t("nav.cvEnglish")}
             </a>
           </div>
-          <a className="Resume" onClick={onResumeClick}>
-            {t("nav.resume")}
-          </a>
         </div>
       </div>
       <div className="Introduction">

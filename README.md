@@ -80,7 +80,7 @@ Todo el texto y datos personales se cambian desde los archivos de idioma, sin to
 
 ### 7. CV y redes
 
-- **CV:** sustituye el archivo `src/Images/CV.pdf` por tu PDF. El botón “CV” del nav ya lo enlaza.
+- **CV:** coloca tus PDFs en `public/cv/` (`Alexis_Herrera_CV_ES.pdf` y `Alexis_Herrera_CV_EN.pdf`). El nav enlaza ambos idiomas.
 - **LinkedIn / GitHub:** en `src/Navbar.tsx` y en el menú móvil busca las URLs `linkedin.com/in/...` y `github.com/...` y reemplázalas por las tuyas.
 
 ### 8. Idiomas
@@ -98,7 +98,8 @@ Todo el texto y datos personales se cambian desde los archivos de idioma, sin to
 ```
 src/
 ├── i18n/locales/     # es.json, en.json, pt.json (todo el texto)
-├── Images/           # Imágenes de proyectos + CV.pdf
+├── Images/           # Imágenes de proyectos
+├── public/cv/      # PDFs del CV (ES / EN)
 ├── CSS Files/        # Estilos por sección
 ├── About.tsx
 ├── Experience.tsx

@@ -42,6 +42,8 @@ const HIGHLIGHT_KEYWORDS = [
 	"Nuxt.js",
 	"Excel",
 	"SICT",
+	"Atomic Design",
+	"MERA",
 	// Estado
 	"Context API",
 	"Pinia",
@@ -125,7 +127,7 @@ function ExperienceDescription({
 	}
 
 	const achievementsIndex = lines.findIndex((line) =>
-		/^(logros(\s+destacados)?|achievements?|conquistas(\s+destacadas)?|erfolge)\s*[:：]?\s*$/i.test(
+		/^(logros(\s+destacados)?|key\s+achievements|achievements?|conquistas(\s+destacadas)?|erfolge)\s*[:：]?\s*$/i.test(
 			line.trim()
 		)
 	);
